@@ -25,6 +25,9 @@ $( document ).ready(function() {
             condition: function() {
                 return !!document.querySelector('[data-markdown]');
             }
+        },{
+            src: 'plugin/math/math.js',
+            async: true
         }, {
             src: 'plugin/highlight/highlight.js',
             async: true,
