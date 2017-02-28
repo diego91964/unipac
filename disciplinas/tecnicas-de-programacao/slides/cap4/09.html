@@ -1,0 +1,27 @@
+<h2 style = "color : #004a97">Verificação</h2>
+
+<pre style = "align :  left;">
+  <code>
+    ALGORITMO
+    DECLARE RAIO_MAIOR, DIAMETRO_CIRCULO
+    DECLARE AC1,AC2,AC3,AC4,AC5,AC6
+    DECLARE SOMA_AREAS, VALOR TOTAL
+    ESCREVA “Digite o valor do diamtro maior em cm”
+    LEIA DIAMETRO_CIRCULO
+    SE DIAMETRO_CIRCULO E UM NUMERO
+      ENTAO:
+        RAIO_MAIOR ← DIAMETRO_CIRCULO / 2
+        AC1 ← 3,14159 * ((RAIO_MAIOR)*(RAIO_MAIOR))
+        AC2 ← 3,14159 * ((RAIO_MAIOR-1)*(RAIO_MAIOR-1))
+        AC3 ← 3,14159 * ((RAIO_MAIOR-2)*(RAIO_MAIOR-2))
+        AC4 ← 3,14159 * ((RAIO_MAIOR-3)*(RAIO_MAIOR-3))
+        AC5 ← 3,14159 * ((RAIO_MAIOR-4)*(RAIO_MAIOR-4))
+        AC6 ← 3,14159 * ((RAIO_MAIOR-5)*(RAIO_MAIOR-5))
+        SOMA_AREAS ← AC1 + AC2 + AC3 + AC4 + AC5 + AC6
+        VALOR_TOTAL ← SOMA_AREAS * 5000;
+        ESCREVA “Total de papelão a ser comprados em cm²: “, VALOR_TOTAL
+      SENAO:
+        ESCREVA "Valor informado incorreto";
+    FIM_ALGORITMO.
+  </code>
+</pre>

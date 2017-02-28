@@ -1,0 +1,21 @@
+<h2 style = "color : #004a97">Acumuladores</h2>
+
+<h4  style="font-size: 25px; text-align: justify;"> Existem duas instruções comumente usadas nos comandos internos das estruturas de repetição. São as
+instruções denominadas acumuladores e contadores. Os acumuladores devem ser usados quando a realização
+de um cálculo precisa de valores obtidos a cada iteração, ou seja, o cálculo só estará pronto com a
+conclusão da repetição. É por isso que um acumulador deve ser inicializado com um valor neutro para a
+operação em que será utilizado. Por exemplo, se for usado em uma adição, deve ser inicializado com zero;
+se for usado em uma multiplicação, deve ser inicializado com 1.</h4>
+
+<pre style = "align :  left;" >
+  <code>
+    SOMA ← 0 // inicialização da variável SOMA com o valor zero
+    PARA I ← 1 ATÉ 5 FAÇA
+    INÍCIO
+      ESCREVA “Digite um número: “
+      LEIA NUM
+      SOMA ← SOMA + NUM // acumulando o valor da variável NUM na variável SOMA
+    FIM
+    ESCREVA “Soma = “,
+  </code>
+</pre>
