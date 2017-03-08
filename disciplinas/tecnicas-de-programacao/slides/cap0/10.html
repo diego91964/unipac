@@ -1,0 +1,33 @@
+<script src="algoritmo/alg.js"></script>
+
+<h2> Teste seu algoritmo </h2>
+
+<script>
+  function executarEx2 (){
+    var codigo = document.getElementById('ex2').value;
+    eval(codigo);
+  }
+
+  var alg = new Algoritmo();
+</script>
+
+<textarea id = "ex2" cols="50"  rows = "10">
+
+var a, b, c;
+
+a = alg.ler('Digite o primeiro numero');
+b = alg.ler('Digite o segundo numero');
+c = alg.soma (a,b);
+
+if (c > 10) {
+  alg.escrever('O resultado da soma maior que 10 é:' + c);
+}else {
+  alg.escrever('O resultado da soma menor que 10 é:' + c);
+}
+
+
+</textarea>
+
+<br/>
+
+<button onclick="executarEx2()"> Executar Algoritmo </button>
