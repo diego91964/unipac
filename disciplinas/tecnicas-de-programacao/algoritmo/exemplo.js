@@ -1,11 +1,12 @@
 var alg = new Algoritmo();
 
-var a, b, c;
+var soma = 0;
+var i = 1;
+var num = 0;
 
-a = alg.ler('Digite o primeiro numero');
-b = alg.ler('Digite o segundo numero');
-c = alg.soma (a,b);
+for (i = 1 ; i < 5 ; i ++){
+      num = alg.ler('Digite um número');
+      soma = alg.soma(soma, num);
+}
 
-
-
-alg.escrever(c , 'alert');
+alg.escrever(soma);

@@ -1,0 +1,32 @@
+<h2 style = "color : #004a97"> Paradigma Orientado a Objetos </h2>
+
+<pre>
+  <code>
+public class Conta {
+  String nrDaCOnta;
+  String descricao;
+  double saldo;
+  double limite;
+  Cliente cliente = new Cliente();
+
+  public boolean saque (double valor){
+      if (valor<=(saldo+limite)){
+          saldo-=valor;
+          return true;
+      } else{
+        return false;
+      }
+   }
+
+  public boolean deposita (double valor){
+    if (valor<=(saldo+limite)){
+      saldo+=valor;
+      return true;
+    } else{
+      return false;
+    }
+  }
+}
+
+</code>
+</pre>
