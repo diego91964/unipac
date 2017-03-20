@@ -1,0 +1,3 @@
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir

@@ -1,0 +1,4 @@
+/home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug
