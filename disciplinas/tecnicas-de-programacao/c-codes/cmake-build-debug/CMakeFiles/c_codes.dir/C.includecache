@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap8/10.c
+stdio.h
+-
+
