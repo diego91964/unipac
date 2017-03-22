@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap8/10.c" "/home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir/cap8/10.c.o"
+  "/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap6/07.c" "/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir/cap6/07.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

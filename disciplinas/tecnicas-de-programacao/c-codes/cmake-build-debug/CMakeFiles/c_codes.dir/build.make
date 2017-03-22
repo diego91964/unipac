@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/diego/dev/ide/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/diego/dev/ide/clion/bin/cmake/bin/cmake -E remove -f
+RM = /home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes
+CMAKE_SOURCE_DIR = /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug
+CMAKE_BINARY_DIR = /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/c_codes.dir/depend.make
@@ -57,41 +57,41 @@ include CMakeFiles/c_codes.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/c_codes.dir/flags.make
 
-CMakeFiles/c_codes.dir/cap8/10.c.o: CMakeFiles/c_codes.dir/flags.make
-CMakeFiles/c_codes.dir/cap8/10.c.o: ../cap8/10.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/c_codes.dir/cap8/10.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c_codes.dir/cap8/10.c.o   -c /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap8/10.c
+CMakeFiles/c_codes.dir/cap6/07.c.o: CMakeFiles/c_codes.dir/flags.make
+CMakeFiles/c_codes.dir/cap6/07.c.o: ../cap6/07.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/c_codes.dir/cap6/07.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c_codes.dir/cap6/07.c.o   -c /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap6/07.c
 
-CMakeFiles/c_codes.dir/cap8/10.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c_codes.dir/cap8/10.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap8/10.c > CMakeFiles/c_codes.dir/cap8/10.c.i
+CMakeFiles/c_codes.dir/cap6/07.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c_codes.dir/cap6/07.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap6/07.c > CMakeFiles/c_codes.dir/cap6/07.c.i
 
-CMakeFiles/c_codes.dir/cap8/10.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c_codes.dir/cap8/10.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap8/10.c -o CMakeFiles/c_codes.dir/cap8/10.c.s
+CMakeFiles/c_codes.dir/cap6/07.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c_codes.dir/cap6/07.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap6/07.c -o CMakeFiles/c_codes.dir/cap6/07.c.s
 
-CMakeFiles/c_codes.dir/cap8/10.c.o.requires:
+CMakeFiles/c_codes.dir/cap6/07.c.o.requires:
 
-.PHONY : CMakeFiles/c_codes.dir/cap8/10.c.o.requires
+.PHONY : CMakeFiles/c_codes.dir/cap6/07.c.o.requires
 
-CMakeFiles/c_codes.dir/cap8/10.c.o.provides: CMakeFiles/c_codes.dir/cap8/10.c.o.requires
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap8/10.c.o.provides.build
-.PHONY : CMakeFiles/c_codes.dir/cap8/10.c.o.provides
+CMakeFiles/c_codes.dir/cap6/07.c.o.provides: CMakeFiles/c_codes.dir/cap6/07.c.o.requires
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.o.provides.build
+.PHONY : CMakeFiles/c_codes.dir/cap6/07.c.o.provides
 
-CMakeFiles/c_codes.dir/cap8/10.c.o.provides.build: CMakeFiles/c_codes.dir/cap8/10.c.o
+CMakeFiles/c_codes.dir/cap6/07.c.o.provides.build: CMakeFiles/c_codes.dir/cap6/07.c.o
 
 
 # Object files for target c_codes
 c_codes_OBJECTS = \
-"CMakeFiles/c_codes.dir/cap8/10.c.o"
+"CMakeFiles/c_codes.dir/cap6/07.c.o"
 
 # External object files for target c_codes
 c_codes_EXTERNAL_OBJECTS =
 
-c_codes: CMakeFiles/c_codes.dir/cap8/10.c.o
+c_codes: CMakeFiles/c_codes.dir/cap6/07.c.o
 c_codes: CMakeFiles/c_codes.dir/build.make
 c_codes: CMakeFiles/c_codes.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable c_codes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable c_codes"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/c_codes.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +99,7 @@ CMakeFiles/c_codes.dir/build: c_codes
 
 .PHONY : CMakeFiles/c_codes.dir/build
 
-CMakeFiles/c_codes.dir/requires: CMakeFiles/c_codes.dir/cap8/10.c.o.requires
+CMakeFiles/c_codes.dir/requires: CMakeFiles/c_codes.dir/cap6/07.c.o.requires
 
 .PHONY : CMakeFiles/c_codes.dir/requires
 
@@ -108,6 +108,6 @@ CMakeFiles/c_codes.dir/clean:
 .PHONY : CMakeFiles/c_codes.dir/clean
 
 CMakeFiles/c_codes.dir/depend:
-	cd /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/c_codes.dir/depend
 

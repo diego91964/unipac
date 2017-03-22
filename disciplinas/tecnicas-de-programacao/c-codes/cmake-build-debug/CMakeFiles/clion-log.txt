@@ -1,6 +1,6 @@
-/home/diego/dev/ide/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes
--- The C compiler identification is GNU 5.2.1
--- The CXX compiler identification is GNU 5.2.1
+/home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug
+-- Build files have been written to: /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug

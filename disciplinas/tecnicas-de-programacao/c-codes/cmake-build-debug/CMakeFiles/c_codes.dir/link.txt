@@ -1,1 +1,1 @@
-/usr/bin/cc  -g   CMakeFiles/c_codes.dir/cap8/10.c.o  -o c_codes 
+/usr/bin/cc  -g   CMakeFiles/c_codes.dir/cap6/07.c.o  -o c_codes 

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/diego/dev/ide/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/diego/dev/ide/clion/bin/cmake/bin/cmake -E remove -f
+RM = /home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes
+CMAKE_SOURCE_DIR = /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug
+CMAKE_BINARY_DIR = /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-pro
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/diego/dev/ide/clion/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/diego/dev/ide/clion/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/diego/dev/ide/clion-2016.3.4/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/dev/repo/ninst/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ c_codes/fast:
 	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/build
 .PHONY : c_codes/fast
 
-cap8/10.o: cap8/10.c.o
+cap6/07.o: cap6/07.c.o
 
-.PHONY : cap8/10.o
+.PHONY : cap6/07.o
 
 # target to build an object file
-cap8/10.c.o:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap8/10.c.o
-.PHONY : cap8/10.c.o
+cap6/07.c.o:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.o
+.PHONY : cap6/07.c.o
 
-cap8/10.i: cap8/10.c.i
+cap6/07.i: cap6/07.c.i
 
-.PHONY : cap8/10.i
+.PHONY : cap6/07.i
 
 # target to preprocess a source file
-cap8/10.c.i:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap8/10.c.i
-.PHONY : cap8/10.c.i
+cap6/07.c.i:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.i
+.PHONY : cap6/07.c.i
 
-cap8/10.s: cap8/10.c.s
+cap6/07.s: cap6/07.c.s
 
-.PHONY : cap8/10.s
+.PHONY : cap6/07.s
 
 # target to generate assembly for a file
-cap8/10.c.s:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap8/10.c.s
-.PHONY : cap8/10.c.s
+cap6/07.c.s:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.s
+.PHONY : cap6/07.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c_codes"
-	@echo "... cap8/10.o"
-	@echo "... cap8/10.i"
-	@echo "... cap8/10.s"
+	@echo "... cap6/07.o"
+	@echo "... cap6/07.i"
+	@echo "... cap6/07.s"
 .PHONY : help
 
 
