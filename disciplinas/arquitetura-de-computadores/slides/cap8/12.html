@@ -1,36 +1,45 @@
-<h2 style = "color : #004a97">Código de Hamming</h2>
+<h2 style = "color : #004a97">Código de Hamming Geração</h2>
 
 
 <li style="text-align: left; font-size: 25px;">
-    Exemplo:
-</li>
-
-<li style="text-align: left; font-size: 25px;">
+    Exemplo: <br/>
     <script type="math/tex;">
       \underline{P1} \underline{P2} 1 \underline{P3} 011 \underline{P4} 111
     </script>
 </li>
+
+
+
 <br/>
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      P1 = 1 \oplus 3 \oplus 5 \oplus 7 \oplus 9 \oplus 11 = 0
+      P1 = 3 \oplus 5 \oplus 7 \oplus 9 \oplus 11 = 0
     </script>
 </li>
 
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      P2 = 2 \oplus 3 \oplus 6 \oplus 7 \oplus 10 \oplus 11 = 1
+      P2 =  3 \oplus 6 \oplus 7 \oplus 10 \oplus 11 = 1
     </script>
 </li>
 
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      P3 = 4 \oplus 5 \oplus 6 \oplus 7 = 1
+      P3 = 5 \oplus 6 \oplus 7 = 0
     </script>
 </li>
 
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      P4 = 8 \oplus 9 \oplus 10 \oplus 11 = 0
+      P4 =  9 \oplus 10 \oplus 11 = 1
+    </script>
+</li>
+
+<br/>
+
+<li style="text-align: left; font-size: 25px;" class="fragment">
+    Resultado: <br/>
+    <script type="math/tex;">
+      \underline{0} \underline{1} 1 \underline{0} 011 \underline{1} 111
     </script>
 </li>

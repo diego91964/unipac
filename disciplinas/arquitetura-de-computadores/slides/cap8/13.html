@@ -1,29 +1,44 @@
-<h2 style = "color : #004a97">Exercícios</h2>
+<h2 style = "color : #004a97">Código de Hamming Verificação</h2>
 
 
 <li style="text-align: left; font-size: 25px;">
-    Calcule os bits de paridade para:
+    Exemplo: <br/>
+    <script type="math/tex;">
+      \underline{0} \underline{1} 0 \underline{0} 011 \underline{1} 111
+    </script>
 </li>
 
+
+
+<br/>
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      1011
+      P1 = 3 \oplus 5 \oplus 7 \oplus 9 \oplus 11 = 1
     </script>
 </li>
 
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      111010101
+      P2 =  3 \oplus 6 \oplus 7 \oplus 10 \oplus 11 = 0
     </script>
 </li>
-
 
 <li style="text-align: left; font-size: 25px;">
     <script type="math/tex;">
-      101010101010101111010101
+      P3 = 5 \oplus 6 \oplus 7 = 0
     </script>
 </li>
 
 <li style="text-align: left; font-size: 25px;">
-    Verifique a palavra (011110011111)
+    <script type="math/tex;">
+      P4 =  9 \oplus 10 \oplus 11 = 1
+    </script>
+</li>
+
+<br/>
+
+<li style="text-align: left; font-size: 25px;" class="fragment">
+    Resultado: <br/>
+    P1 e P2 não coincidem com o Código de Hamming.Então, o bit de verificação
+    em comum será o bit errado. Neste caso, o bit 3.
 </li>
