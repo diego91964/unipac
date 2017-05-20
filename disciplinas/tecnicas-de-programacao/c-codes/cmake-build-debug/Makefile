@@ -123,32 +123,32 @@ c_codes/fast:
 	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/build
 .PHONY : c_codes/fast
 
-cap6/07.o: cap6/07.c.o
+primos/gera-primo.o: primos/gera-primo.c.o
 
-.PHONY : cap6/07.o
+.PHONY : primos/gera-primo.o
 
 # target to build an object file
-cap6/07.c.o:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.o
-.PHONY : cap6/07.c.o
+primos/gera-primo.c.o:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.o
+.PHONY : primos/gera-primo.c.o
 
-cap6/07.i: cap6/07.c.i
+primos/gera-primo.i: primos/gera-primo.c.i
 
-.PHONY : cap6/07.i
+.PHONY : primos/gera-primo.i
 
 # target to preprocess a source file
-cap6/07.c.i:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.i
-.PHONY : cap6/07.c.i
+primos/gera-primo.c.i:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.i
+.PHONY : primos/gera-primo.c.i
 
-cap6/07.s: cap6/07.c.s
+primos/gera-primo.s: primos/gera-primo.c.s
 
-.PHONY : cap6/07.s
+.PHONY : primos/gera-primo.s
 
 # target to generate assembly for a file
-cap6/07.c.s:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/cap6/07.c.s
-.PHONY : cap6/07.c.s
+primos/gera-primo.c.s:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.s
+.PHONY : primos/gera-primo.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c_codes"
-	@echo "... cap6/07.o"
-	@echo "... cap6/07.i"
-	@echo "... cap6/07.s"
+	@echo "... primos/gera-primo.o"
+	@echo "... primos/gera-primo.i"
+	@echo "... primos/gera-primo.s"
 .PHONY : help
 
 

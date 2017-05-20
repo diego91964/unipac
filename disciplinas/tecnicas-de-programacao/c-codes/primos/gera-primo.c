@@ -28,7 +28,8 @@ int main () {
   scanf("%d" , &limiteSuperior);
 
   for (i = 1; i < limiteSuperior ; i++){
-        if (verifica_primo(i)){
+        if (verifica_primo(i)
+                ){
           printf("O número %d é primo. \n" , i);
         }
   }

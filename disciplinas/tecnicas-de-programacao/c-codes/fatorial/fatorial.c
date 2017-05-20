@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main () {
+/*int main () {
 
 	int resultado, entrada, i;
 
@@ -14,5 +14,24 @@ int main () {
 
 	printf ("%d", resultado);
 
+
+}
+*/
+
+int main () {
+
+	int i , fat, total;
+
+	scanf("%d", &fat);
+	total = 1;
+
+	for (i=2; i<=fat; i++){
+		total = total*i;
+
+	}
+
+	printf("%d",total);
+
+	return 0;
 
 }

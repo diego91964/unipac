@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cap6/07.c">
+		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/primos/gera-primo.c">
 			<Option target="c_codes"/>
 		</Unit>
 		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/CMakeLists.txt">
