@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/primos/gera-primo.c
-stdio.h
--
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c
+calculadora.h
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.h
+
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.h
 

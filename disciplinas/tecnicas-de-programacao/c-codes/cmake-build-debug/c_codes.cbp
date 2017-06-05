@@ -84,7 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/primos/gera-primo.c">
+		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c">
+			<Option target="c_codes"/>
+		</Unit>
+		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.h">
 			<Option target="c_codes"/>
 		</Unit>
 		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/CMakeLists.txt">

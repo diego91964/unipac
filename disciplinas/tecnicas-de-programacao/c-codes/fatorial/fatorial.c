@@ -27,11 +27,25 @@ int main () {
 
 	for (i=2; i<=fat; i++){
 		total = total*i;
-
 	}
 
 	printf("%d",total);
 
 	return 0;
 
+}
+
+
+int funcao () {
+
+	int i , num, total;
+
+	scanf("%d", &num);
+	total = 1;
+
+	for (i=2; i<=fat; i++){
+		total = total*i;
+	}
+
+	return total;
 }

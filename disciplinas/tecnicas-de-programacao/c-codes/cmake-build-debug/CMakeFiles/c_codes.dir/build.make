@@ -57,38 +57,38 @@ include CMakeFiles/c_codes.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/c_codes.dir/flags.make
 
-CMakeFiles/c_codes.dir/primos/gera-primo.c.o: CMakeFiles/c_codes.dir/flags.make
-CMakeFiles/c_codes.dir/primos/gera-primo.c.o: ../primos/gera-primo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/c_codes.dir/primos/gera-primo.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c_codes.dir/primos/gera-primo.c.o   -c /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/primos/gera-primo.c
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.o: CMakeFiles/c_codes.dir/flags.make
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.o: ../funcoes/calculadora.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/c_codes.dir/funcoes/calculadora.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/c_codes.dir/funcoes/calculadora.c.o   -c /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c
 
-CMakeFiles/c_codes.dir/primos/gera-primo.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c_codes.dir/primos/gera-primo.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/primos/gera-primo.c > CMakeFiles/c_codes.dir/primos/gera-primo.c.i
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/c_codes.dir/funcoes/calculadora.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c > CMakeFiles/c_codes.dir/funcoes/calculadora.c.i
 
-CMakeFiles/c_codes.dir/primos/gera-primo.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c_codes.dir/primos/gera-primo.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/primos/gera-primo.c -o CMakeFiles/c_codes.dir/primos/gera-primo.c.s
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/c_codes.dir/funcoes/calculadora.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c -o CMakeFiles/c_codes.dir/funcoes/calculadora.c.s
 
-CMakeFiles/c_codes.dir/primos/gera-primo.c.o.requires:
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.requires:
 
-.PHONY : CMakeFiles/c_codes.dir/primos/gera-primo.c.o.requires
+.PHONY : CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.requires
 
-CMakeFiles/c_codes.dir/primos/gera-primo.c.o.provides: CMakeFiles/c_codes.dir/primos/gera-primo.c.o.requires
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.o.provides.build
-.PHONY : CMakeFiles/c_codes.dir/primos/gera-primo.c.o.provides
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.provides: CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.requires
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.provides.build
+.PHONY : CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.provides
 
-CMakeFiles/c_codes.dir/primos/gera-primo.c.o.provides.build: CMakeFiles/c_codes.dir/primos/gera-primo.c.o
+CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.provides.build: CMakeFiles/c_codes.dir/funcoes/calculadora.c.o
 
 
 # Object files for target c_codes
 c_codes_OBJECTS = \
-"CMakeFiles/c_codes.dir/primos/gera-primo.c.o"
+"CMakeFiles/c_codes.dir/funcoes/calculadora.c.o"
 
 # External object files for target c_codes
 c_codes_EXTERNAL_OBJECTS =
 
-c_codes: CMakeFiles/c_codes.dir/primos/gera-primo.c.o
+c_codes: CMakeFiles/c_codes.dir/funcoes/calculadora.c.o
 c_codes: CMakeFiles/c_codes.dir/build.make
 c_codes: CMakeFiles/c_codes.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable c_codes"
@@ -99,7 +99,7 @@ CMakeFiles/c_codes.dir/build: c_codes
 
 .PHONY : CMakeFiles/c_codes.dir/build
 
-CMakeFiles/c_codes.dir/requires: CMakeFiles/c_codes.dir/primos/gera-primo.c.o.requires
+CMakeFiles/c_codes.dir/requires: CMakeFiles/c_codes.dir/funcoes/calculadora.c.o.requires
 
 .PHONY : CMakeFiles/c_codes.dir/requires
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/c_codes.dir/primos/gera-primo.c.o"
+  "CMakeFiles/c_codes.dir/funcoes/calculadora.c.o"
   "c_codes.pdb"
   "c_codes"
 )

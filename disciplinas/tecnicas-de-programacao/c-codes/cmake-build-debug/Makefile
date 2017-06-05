@@ -123,32 +123,32 @@ c_codes/fast:
 	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/build
 .PHONY : c_codes/fast
 
-primos/gera-primo.o: primos/gera-primo.c.o
+funcoes/calculadora.o: funcoes/calculadora.c.o
 
-.PHONY : primos/gera-primo.o
+.PHONY : funcoes/calculadora.o
 
 # target to build an object file
-primos/gera-primo.c.o:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.o
-.PHONY : primos/gera-primo.c.o
+funcoes/calculadora.c.o:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.o
+.PHONY : funcoes/calculadora.c.o
 
-primos/gera-primo.i: primos/gera-primo.c.i
+funcoes/calculadora.i: funcoes/calculadora.c.i
 
-.PHONY : primos/gera-primo.i
+.PHONY : funcoes/calculadora.i
 
 # target to preprocess a source file
-primos/gera-primo.c.i:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.i
-.PHONY : primos/gera-primo.c.i
+funcoes/calculadora.c.i:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.i
+.PHONY : funcoes/calculadora.c.i
 
-primos/gera-primo.s: primos/gera-primo.c.s
+funcoes/calculadora.s: funcoes/calculadora.c.s
 
-.PHONY : primos/gera-primo.s
+.PHONY : funcoes/calculadora.s
 
 # target to generate assembly for a file
-primos/gera-primo.c.s:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/primos/gera-primo.c.s
-.PHONY : primos/gera-primo.c.s
+funcoes/calculadora.c.s:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.s
+.PHONY : funcoes/calculadora.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c_codes"
-	@echo "... primos/gera-primo.o"
-	@echo "... primos/gera-primo.i"
-	@echo "... primos/gera-primo.s"
+	@echo "... funcoes/calculadora.o"
+	@echo "... funcoes/calculadora.i"
+	@echo "... funcoes/calculadora.s"
 .PHONY : help
 
 

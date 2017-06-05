@@ -1,8 +1,6 @@
 #include<stdio.h>
 
-
-int verifica_primo (int numero){
-
+int verifica_primo(int numero){
 	int i,primo;
 
   primo = 1;
