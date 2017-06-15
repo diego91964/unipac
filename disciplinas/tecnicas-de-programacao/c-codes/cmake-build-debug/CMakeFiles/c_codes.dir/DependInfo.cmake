@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c" "/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir/funcoes/calculadora.c.o"
+  "/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/lista/teste.c" "/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/cmake-build-debug/CMakeFiles/c_codes.dir/lista/teste.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

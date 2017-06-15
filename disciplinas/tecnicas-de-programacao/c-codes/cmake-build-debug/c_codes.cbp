@@ -84,10 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c">
-			<Option target="c_codes"/>
-		</Unit>
-		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.h">
+		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/lista/teste.c">
 			<Option target="c_codes"/>
 		</Unit>
 		<Unit filename="/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/CMakeLists.txt">

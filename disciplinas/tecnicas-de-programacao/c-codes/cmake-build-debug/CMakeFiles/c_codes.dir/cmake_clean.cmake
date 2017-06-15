@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/c_codes.dir/funcoes/calculadora.c.o"
+  "CMakeFiles/c_codes.dir/lista/teste.c.o"
   "c_codes.pdb"
   "c_codes"
 )

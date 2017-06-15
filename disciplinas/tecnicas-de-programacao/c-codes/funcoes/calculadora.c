@@ -10,7 +10,7 @@ int mult(int n1, int n2){
     resultado = 0;
 
     for (i = 0; i < n1 ; i++){
-        resultado += n2;
+        resultado = resultado + n2;
 
     }
 

@@ -31,10 +31,12 @@ int main () {
     auxN1 = n1;
     auxN2 = n2;
     nCarry = 0;
+    carry = 0;
     i = 0;
 
     casasN1 = numero_casas(n1);
     casasN2 = numero_casas(n2);
+
     casasMaior = seleciona_maior(casasN1 , casasN2);
 
     while (i < casasMaior){
@@ -43,7 +45,7 @@ int main () {
         auxN1 = auxN1/10;
         auxN2 = auxN2/10;
 
-        if ((vCarryN1 + vCarryN2 + carry) > 9){
+        if ((vCarryN1 + vCarryN2 + carry) > 1){
             nCarry ++;
             carry = 1;
         }else {

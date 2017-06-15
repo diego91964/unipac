@@ -123,32 +123,32 @@ c_codes/fast:
 	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/build
 .PHONY : c_codes/fast
 
-funcoes/calculadora.o: funcoes/calculadora.c.o
+lista/teste.o: lista/teste.c.o
 
-.PHONY : funcoes/calculadora.o
+.PHONY : lista/teste.o
 
 # target to build an object file
-funcoes/calculadora.c.o:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.o
-.PHONY : funcoes/calculadora.c.o
+lista/teste.c.o:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/lista/teste.c.o
+.PHONY : lista/teste.c.o
 
-funcoes/calculadora.i: funcoes/calculadora.c.i
+lista/teste.i: lista/teste.c.i
 
-.PHONY : funcoes/calculadora.i
+.PHONY : lista/teste.i
 
 # target to preprocess a source file
-funcoes/calculadora.c.i:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.i
-.PHONY : funcoes/calculadora.c.i
+lista/teste.c.i:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/lista/teste.c.i
+.PHONY : lista/teste.c.i
 
-funcoes/calculadora.s: funcoes/calculadora.c.s
+lista/teste.s: lista/teste.c.s
 
-.PHONY : funcoes/calculadora.s
+.PHONY : lista/teste.s
 
 # target to generate assembly for a file
-funcoes/calculadora.c.s:
-	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/funcoes/calculadora.c.s
-.PHONY : funcoes/calculadora.c.s
+lista/teste.c.s:
+	$(MAKE) -f CMakeFiles/c_codes.dir/build.make CMakeFiles/c_codes.dir/lista/teste.c.s
+.PHONY : lista/teste.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... c_codes"
-	@echo "... funcoes/calculadora.o"
-	@echo "... funcoes/calculadora.i"
-	@echo "... funcoes/calculadora.s"
+	@echo "... lista/teste.o"
+	@echo "... lista/teste.i"
+	@echo "... lista/teste.s"
 .PHONY : help
 
 

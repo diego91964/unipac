@@ -1,1 +1,1 @@
-/usr/bin/cc  -g   CMakeFiles/c_codes.dir/funcoes/calculadora.c.o  -o c_codes 
+/usr/bin/cc  -g   CMakeFiles/c_codes.dir/lista/teste.c.o  -o c_codes 

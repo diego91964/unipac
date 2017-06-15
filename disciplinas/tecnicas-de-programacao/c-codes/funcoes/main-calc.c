@@ -2,7 +2,7 @@
 #include "calculadora.h"
 
 /*   Para realizar a build executar os seguintes comandos:
- * 
+ *
  *  gcc -c -g calculadora.c
  *  gcc -c -g main-calc.c
  *  gcc -o main main-calc.o calculadora.o

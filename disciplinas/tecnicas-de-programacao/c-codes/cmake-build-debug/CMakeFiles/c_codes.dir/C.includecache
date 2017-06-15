@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.c
-calculadora.h
-/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.h
-
-/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/funcoes/calculadora.h
+/home/diego/dev/repo/unipac/disciplinas/tecnicas-de-programacao/c-codes/lista/teste.c
+stdio.h
+-
+locale.h
+-
+math.h
+-
 
