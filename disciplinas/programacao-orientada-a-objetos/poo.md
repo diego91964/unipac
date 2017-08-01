@@ -16,7 +16,7 @@
 
 ----  ----
 
-# 1. Programação Orientada a Objetos
+# 1. Introdução
 
 Consiste em um paradigma de programação que se baseia na composição e interação
 de objetos.
@@ -57,7 +57,7 @@ ligar,freiar, acelerar, abrir vidro, etc.
 
 ----
 
-## Classes
+## Classes x Objetos
 
 Para que exista um objeto, é necessário um modelo, a classe é este modelo, ela
 define tudo que existe no objeto, até a implementação de suas operações.
@@ -67,7 +67,7 @@ Ainda utilizando o exemplo do carro, a classe consiste no projeto do veículo.
 
 ----
 
-## Classes
+## Propriedades de uma Classe
 
 Em uma classe é possível:
 * Declarar as variáveis ​​do objeto.
@@ -101,6 +101,85 @@ Note:
 Um carro é um veículo. Um veículo tem variáveis genéricas, como cor e modelo. Também
 possui operações genéricas, como ligar e desligar. Um caminhão possui carroceria, um
 carro não, ou seja, isto são propriedades específicas.
+
+
+----
+
+## Herança
+
+Uma classe que herda variáveis e operações de uma classe genérica é chamada de
+subclasse e a classe genérica é chamada de superclasse.
+
+![](img/heranca.svg)
+
+
+Note:
+A subclasse não pode excluir nenhuma propriedade herdada da superclasse.
+
+----
+
+## Exemplo Herança
+
+<img src="img/heranca.jpg" width="500"/>
+
+[Fonte: Devmedia](http://www.devmedia.com.br/sobrecarga-e-sobreposicao-de-metodos-em-orientacao-a-objetos/33066)
+
+----
+
+## Sobreposição
+
+A subclasse é livre para definir novas funções para essas operações, isso é chamado de
+sobreposição.
+
+Note:
+* A subclasse pode seletivamente quais funções sobrepõe.
+* Todas as funções que não são substituídas são herdadas.
+
+----
+
+
+## Exemplo de Sobreposição
+
+<img src="img/sobreposicao.jpg" width="500">
+
+[Fonte: Devmedia](http://www.devmedia.com.br/sobrecarga-e-sobreposicao-de-metodos-em-orientacao-a-objetos/33066)
+
+
+
+----
+
+## Parâmetro
+
+Uma operação é chamada de método e recebe parâmetros para executar a sequência
+de ações.
+
+```
+  Carro.setVelocidade(velocidadeAtual);
+
+  #O Parâmetro do método será a velocidade atual.
+
+```
+
+----
+
+## Sobrecarga
+
+Uma sobrecarga de método consiste em manter vários métodos com o mesmo nome, mas
+com número de parâmetros diferentes.
+
+```
+  Veiculo.setVelocidade(velocidadeAtual);
+  Carro.setVelocidade(velocidadeAtual,marcha);
+  Caminhao.setVelocidade(velocidadeAtual,marcha,quantidadeDeArReservatorio)
+
+
+```
+
+----
+
+
+
+
 
 ## reveal.js: Showroom
 
