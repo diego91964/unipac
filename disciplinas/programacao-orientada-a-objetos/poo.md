@@ -177,20 +177,37 @@ com número de parâmetros diferentes.
 
 ----
 
+## Polimorfismo
+
+É caracterizado quando duas ou mais classes distintas têm métodos de mesmo nome,
+de forma que uma função possa utilizar um objeto de qualquer uma das classes
+polimórficas, sem necessidade de tratar de forma diferenciada conforme a classe do objeto.
+
+Note:
+```
+public abstract class OperacaoMatematica {
+    public abstract double calcular(double x, double y);
+}
+public class Soma extends OperacaoMatematica {
+    public double calcular(double x, double y) {
+      return x + y; }
+}
+public class Subtracao extends OperacaoMatematica {
+    public double calcular(double x, double y) {
+        return x - y; }
+}
+
+
+```
+
+----
 
 
 
+## Encapsulamento
 
-## reveal.js: Showroom
-
-Some reveal.js presentations:
-* *"Official"* demo: http://lab.hakim.se/reveal-js
-* http://slid.es/gsklee/functional-programming-in-5-minutes
-* http://www.adidahiya.com/design.html
-* http://slides.drublic.de/awesome-code
-* http://hoebel.net/presentations_archive/saltstack/saltstack.html
-
-More demos: https://github.com/hakimel/reveal.js/wiki/Example-Presentations
+Significa juntar o programa em partes, o mais isoladas possível.
+A ideia é tornar o software mais flexível, fácil de modificar e de criar novas implementações.
 
 
 ----  ----
