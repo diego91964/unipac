@@ -290,9 +290,24 @@ O Java permite que você crie bibliotecas para a linguagem, ajudando assim no re
 
 ----
 
-## Fases de Criação de um Programa (1,2)
+## Fases de um Programa (1)
 
 1. Criar o código fonte (Editor)
+
+```
+public class OlaUnipac {
+
+    public static void main(String[] args) {
+        System.out.println("OlaUnipac");
+    }
+
+}
+```
+
+----
+
+## Fases de um Programa (2)
+
 2. Compilando o programa em Bytecodes
 
 ```
@@ -301,7 +316,7 @@ O Java permite que você crie bibliotecas para a linguagem, ajudando assim no re
 
 ----
 
-## Fases de Criação de um Programa (3)
+## Fases de um Programa (3)
 
 3. Executando o software (Invocação da JVM)
 
@@ -313,7 +328,7 @@ O Java permite que você crie bibliotecas para a linguagem, ajudando assim no re
 
 ----
 
-## Fases de Criação de um Programa (4,5)
+## Fases de um Programa (4,5)
 
 4. Adiciona o arquivo '.class' na memória primária
 5. Verifica se o bytecode esta correto
@@ -324,7 +339,7 @@ para certifique-se de que eles são válidos e não violam as restrições de se
 
 ----
 
-## Fases de Criação de um Programa (6)
+## Fases de um Programa (6)
 
 6. Execução do Programa
 
@@ -337,4 +352,28 @@ Quando a JVM encontra partes já compiladas, será mais rápido executar tal có
 Assim, os programas Java passam por duas fases de compilação, uma em que o código-fonte
 é traduzido em bytecodes (para portabilidade em JVMs em diferentes plataformas de computador)
 e um segundo, no qual, durante a execução, os bytecodes são traduzidos para o idioma da máquina
-que executa o programa. 
+que executa o programa.
+
+----
+
+## Comentário
+
+No Java existem dois tipos de comentário:
+
+```
+public class OlaUnipac {
+    // Comentário em Linha
+    public static void main(String[] args) {
+        /*
+        Comentário em bloco
+        */
+        System.out.println("OlaUnipac");
+    }
+
+}
+
+```
+
+---- ----
+
+# 3. Classes
