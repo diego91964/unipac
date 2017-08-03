@@ -1,6 +1,6 @@
 <!-- .slide: data-state="no-toc-progress" --> <!-- don't show toc progress bar on this slide -->
 
-# Prorgramação Orietanda a Objetos
+# Programação Orientada a Objetos
 <!-- .element: class="no-toc-progress" --> <!-- slide not in toc progress bar -->
 
 [Diego Silva](https://github.com/diego91964) | [online][1] | [src][2]
