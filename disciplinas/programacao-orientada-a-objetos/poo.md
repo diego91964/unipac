@@ -526,3 +526,6 @@ java Echo "Drink Hot Java"
 ----
 
 ## String
+
+O tipo de dados String já existe nativamente no Java, não sendo necesário a criação
+de um array de caracteres.
