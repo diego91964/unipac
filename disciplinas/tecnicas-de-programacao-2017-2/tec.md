@@ -35,28 +35,48 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 
 # 2.1 Teoria dos Conjutos
 
+[Conjuntos - 1](https://www.youtube.com/watch?v=0aUEDxYjZg8)
+[Conjuntos - 2](https://www.youtube.com/watch?v=Wxm3ugnq9Sw)
+[Conjuntos - 3](https://www.youtube.com/watch?v=c5a99sX-Sq8)
+[Conjuntos - 4](https://www.youtube.com/watch?v=eZfFpnvudR0)
 ----
 
 # 2.2 Polinômios
+
+[Polinomios](https://www.youtube.com/watch?v=wDmOoY5Mm58)
 
 ----
 
 # 2.3 Logaritmos
 
+[Logaritmos](https://www.youtube.com/watch?v=esdFuyG7zGs&list=PLTPg64KdGgYiyW4u-g8y-dSkT1iz2cUKA)
+
 ----
 
 # 2.4 Média
+
+[Média Aritmética](https://www.youtube.com/watch?v=2sRWaVJh7_o)
+[Média Ponderada](https://www.youtube.com/watch?v=o8fEcLAar0w)
 
 ----
 
 # 2.5 Porcentagem
 
+[Porcentagem](https://www.youtube.com/watch?v=ZZXcTQpbdaE)
+
 ----
 
 # 2.6 Expressões Booleanas
 
+* AND: Será 1 somente se todos os operadores forem 1.
+* OR: Será 0 somente se todos os operadores forem 0.
+* NOT: Será 0 se o operador for 1, e 1 se o operador for 0
+
 ----
 
 # 2.6 Bases Decimais
+
+* Conversão de binário para decimal.
+* Conversão de decimal para binário.
 
 ----
