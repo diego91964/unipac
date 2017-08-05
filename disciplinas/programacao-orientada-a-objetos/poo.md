@@ -356,6 +356,16 @@ que executa o programa.
 
 ----
 
+## Função Main
+
+A primeira função a ser executada em um programa escrito em Java será a função Main.
+
+```
+    public static void main(String[] args)
+```
+
+----
+
 ## Comentário
 
 No Java existem dois tipos de comentário:
@@ -374,8 +384,145 @@ public class OlaUnipac {
 
 ```
 
+----
+
+## Métodos
+
+Um objeto pode executar as ações, essas ações possíveis são definidas em seus métodos.
+
+```
+public class Unipac {
+
+    String nome;
+    String endereco;
+
+    public String retornaNome () {
+      return nome;
+    }
+
+    public String retornaEndereco () {
+      return endereco;
+    }
+}
+
+```
+
+----
 
 
 ----  ----
 
-# 3. Classes
+# 3. Exercício prático
+
+A forma mais simples de aprender a utilizar classes é criando cenários da vida real.
+
+----
+
+## Classe de um Computador
+
+Crie um cenário pensando no computador:
+* Liste 10 propriedades
+* Liste 2 componentes Internos
+* Liste 2 ações para o computador
+* Liste 1 ações para cada componente
+
+----
+
+## Exercício
+
+Tente passar tudo que foi criado para a linguagem Java.
+
+----  ----
+
+# 4. Entrada e Saída
+
+A linguagem Java possui diversos tipos de entrada e saída de dados, os principais
+são pela entrada padrão e por argumentos.
+
+----
+
+## Saída de dados
+
+A saída de dados padrão do Java é o terminal. Para utilizá-la é necessário utilzar
+o seguinte código:
+
+```
+ System.out.println("OlaUnipac");
+ ou
+ System.out.printf("A soma é %d%n", soma);
+```
+
+----
+
+## Caracteres especiais
+
+* \n Nova linha
+* \t Tab na horizontal
+* \r Retorna o cursor
+* \\\\ Barra
+* \" Aspas
+
+----
+
+## Entrada de dados - Scanner
+
+A classe Scanner realiza a leitura de dados da entrada padrão (teclado).
+
+```
+import java.util.Scanner;
+
+public class Somador {
+  public static void main(String[] args){
+
+    Scanner input = new Scanner(System.in);
+    int numero1;
+    int numero2;
+    int soma;
+
+    System.out.print("Digite o número 1 ");
+    numero1 = input.nextInt();
+    System.out.print("Digite o número 2 ");
+    numero2 = input.nextInt();
+    soma = numero1 + numero2;
+    System.out.printf("A soma é %d%n", soma);
+  }
+}
+```
+
+----
+
+## Entrada de dados - Args
+
+O args que está no método main é utilizado para a entrada de dados:
+
+```
+public class Echo {
+    public static void main (String[] args) {
+        for (String s: args) {
+            System.out.println(s);
+        }
+    }
+}
+```
+
+```
+javac Echo.java
+```
+
+```
+java Echo Drink Hot Java
+
+```
+
+```
+java Echo "Drink Hot Java"
+
+```
+
+----  ----
+
+# 5. Tipos de dados
+
+----
+
+## String
