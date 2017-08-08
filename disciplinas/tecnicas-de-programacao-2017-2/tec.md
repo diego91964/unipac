@@ -16,7 +16,7 @@
 
 ----  ----
 
-# 1. Introdução
+# Objetivo da Disciplina
 
 Capacitar o aluno a analisar problemas e projetar, implementar e validar soluções
 para os mesmos, através do uso de metodologias, técnicas e ferramentas de programação
@@ -29,44 +29,48 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 
 ----  ----
 
-# 2. Base Teórica
+# Base Teórica
 
 ----
 
-# 2.1 Teoria dos Conjutos
+## Teoria dos Conjutos
 
 [Conjuntos - 1](https://www.youtube.com/watch?v=0aUEDxYjZg8)
+
 [Conjuntos - 2](https://www.youtube.com/watch?v=Wxm3ugnq9Sw)
+
 [Conjuntos - 3](https://www.youtube.com/watch?v=c5a99sX-Sq8)
+
 [Conjuntos - 4](https://www.youtube.com/watch?v=eZfFpnvudR0)
+
 ----
 
-# 2.2 Polinômios
+## Polinômios
 
 [Polinomios](https://www.youtube.com/watch?v=wDmOoY5Mm58)
 
 ----
 
-# 2.3 Logaritmos
+## Logaritmos
 
 [Logaritmos](https://www.youtube.com/watch?v=esdFuyG7zGs&list=PLTPg64KdGgYiyW4u-g8y-dSkT1iz2cUKA)
 
 ----
 
-# 2.4 Média
+## Média
 
 [Média Aritmética](https://www.youtube.com/watch?v=2sRWaVJh7_o)
 [Média Ponderada](https://www.youtube.com/watch?v=o8fEcLAar0w)
 
 ----
 
-# 2.5 Porcentagem
+## Porcentagem
 
 [Porcentagem](https://www.youtube.com/watch?v=ZZXcTQpbdaE)
 
 ----
 
-# 2.6 Expressões Booleanas
+## Expressões Booleanas
 
 * AND: Será 1 somente se todos os operadores forem 1.
 * OR: Será 0 somente se todos os operadores forem 0.
@@ -74,9 +78,69 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 
 ----
 
-# 2.6 Bases Decimais
+## Bases Decimais
 
 * Conversão de binário para decimal.
 * Conversão de decimal para binário.
 
+----  ----
+
+# Conceitos
+
+Lógica de programação é a técnica de encadear pensamentos para atingir determinado
+objetigo. O aprendizado desta técnica é necessário para quem deseja criar softwares.
+
 ----
+
+
+## Algoritmo
+
+Algoritmo consiste em uma sequência finita de passos com o objetivo de solucionar
+um problema.
+
+----
+
+## Instrução
+
+Instrução indica a um computador uma ação elementar a ser executada.
+
+----
+
+## Ex. de Algoritmo
+
+1. Destrancar o carro.
+2. Entrar no carro.
+3. Colocar o cinto de segurança.
+4. Colocar a chave na ignição.
+5. Colocar o carro "ponto morto".
+6. Girar a chave.
+7. Ligar o carro.
+8. Arrancar.
+
+----
+
+## Exercício
+
+Descreva os seguintes algoritmos:
+
+1. Trocar lampada
+2. Trocar pneu do carro
+3. Fazer compras
+
+----
+
+## Condição
+
+Algoritmo para fazer compras:
+1.  Fazer lista de compras.
+2.  Ir ao mercado.
+3.  Procurar produto.
+4.  Produto disponível?
+5.  
+    - Sim: Adiciona ao carrinho.
+    - Não: Procura outra marca.
+6.  Realiza pagamento.
+
+----  ----
+
+# Primeiro programa
