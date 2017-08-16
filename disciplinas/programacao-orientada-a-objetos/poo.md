@@ -409,6 +409,83 @@ public class Unipac {
 
 ----
 
+## Declaração de Variáveis
+
+As variáveis no java podem ser locais, ou seja, são declaradas no bloco em que são usadas.
+Ou ainda, variáveis de instância, que são declaradas nas classes do bloco.
+
+----
+
+## Declaração de Variáveis - Locais
+
+```
+public class Calculadora {
+
+    public int somaDois (int numero) {
+      int dois = 2;
+      int soma = dois + numero;
+      return soma;
+    } // Isto é apenas um exemplo
+
+}
+
+```
+
+----
+
+## Declaração de Variáveis - Instância
+
+```
+public class Calculadora {
+    int dois = 2;
+
+    public int somaDois (int numero) {
+
+      int soma = dois + numero;
+      return soma;
+    }
+
+    public int diminuiDois (int numero) {
+
+      int soma =  numero - dois;
+      return soma;
+    }
+}
+
+```
+
+----
+
+
+## Tipos
+
+Java é uma linguagem fortemente tipada, sendo assim, é necessário informar o
+tipo de uma variável em sua declaração, e o mesmo nunca poderá ser alterado.
+
+
+----
+
+
+## Tipos primitivos
+
+Os tipos primitivos em Java são aqueles que guardam o valor real das variáveis.
+São tipos primitivos em JAVA: byte, short, int, long, float, double, char.
+
+
+[Fonte](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+
+Note:
+Um inteiro literal é de tipo longo se termina com a letra L ou l; Caso contrário, é do tipo int.
+// O número 26, em decimal
+Int decVal = 26;
+// O número 26, em hexadecimal
+Int hexVal = 0x1a;
+// O número 26, em binário
+Int binVal = 0b11010;
+double d1 = 123.4;
+// Mesmo valor utilizando ponto flutuante ou notação científica
+double d2 = 1.234e2;
+float f1  = 123.4f;
 
 ----  ----
 
