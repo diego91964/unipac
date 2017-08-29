@@ -1,6 +1,6 @@
 <!-- .slide: data-state="no-toc-progress" --> <!-- don't show toc progress bar on this slide -->
 
-# Prorgramação Orietanda a Objetos
+# Programação Orientada a Objetos
 <!-- .element: class="no-toc-progress" --> <!-- slide not in toc progress bar -->
 
 [Diego Silva](https://github.com/diego91964) | [online][1] | [src][2]
@@ -356,6 +356,16 @@ que executa o programa.
 
 ----
 
+## Função Main
+
+A primeira função a ser executada em um programa escrito em Java será a função Main.
+
+```
+    public static void main(String[] args)
+```
+
+----
+
 ## Comentário
 
 No Java existem dois tipos de comentário:
@@ -374,8 +384,375 @@ public class OlaUnipac {
 
 ```
 
+----
 
+## Métodos
+
+Um objeto pode executar as ações, essas ações possíveis são definidas em seus métodos.
+
+```
+public class Unipac {
+
+    String nome;
+    String endereco;
+
+    public String retornaNome () {
+      return nome;
+    }
+
+    public String retornaEndereco () {
+      return endereco;
+    }
+}
+
+```
+
+----
+
+## Declaração de Variáveis
+
+As variáveis no java podem ser locais, ou seja, são declaradas no bloco em que são usadas.
+Ou ainda, variáveis de instância, que são declaradas nas classes do bloco.
+
+----
+
+## Declaração de Variáveis - Locais
+
+```
+public class Calculadora {
+
+    public int somaDois (int numero) {
+      int dois = 2;
+      int soma = dois + numero;
+      return soma;
+    } // Isto é apenas um exemplo
+
+}
+
+```
+
+----
+
+## Declaração de Variáveis - Instância
+
+```
+public class Calculadora {
+    int dois = 2;
+
+    public int somaDois (int numero) {
+
+      int soma = dois + numero;
+      return soma;
+    }
+
+    public int diminuiDois (int numero) {
+
+      int soma =  numero - dois;
+      return soma;
+    }
+}
+
+```
+
+----
+
+
+## Tipos
+
+Java é uma linguagem fortemente tipada, sendo assim, é necessário informar o
+tipo de uma variável em sua declaração, e o mesmo nunca poderá ser alterado.
+
+
+----
+
+
+## Tipos primitivos
+
+Os tipos primitivos em Java são aqueles que guardam o valor real das variáveis.
+São tipos primitivos em JAVA: byte, short, int, long, float, double, char.
+
+
+[Fonte](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+
+Note:
+Um inteiro literal é de tipo longo se termina com a letra L ou l; Caso contrário, é do tipo int.
+// O número 26, em decimal
+Int decVal = 26;
+// O número 26, em hexadecimal
+Int hexVal = 0x1a;
+// O número 26, em binário
+Int binVal = 0b11010;
+double d1 = 123.4;
+// Mesmo valor utilizando ponto flutuante ou notação científica
+double d2 = 1.234e2;
+float f1  = 123.4f;
 
 ----  ----
 
-# 3. Classes
+# 3. Exercício prático (ex1)
+
+A forma mais simples de aprender a utilizar classes é criando cenários da vida real.
+
+----
+
+## Classe de um Computador
+
+Crie um cenário pensando no computador:
+* Liste 10 propriedades
+* Liste 2 componentes Internos
+* Liste 2 ações para o computador
+* Liste 1 ações para cada componente
+
+----
+
+## Exercício
+
+Tente passar tudo que foi criado para a linguagem Java.
+
+----  ----
+
+# 4. Entrada e Saída
+
+A linguagem Java possui diversos tipos de entrada e saída de dados, os principais
+são pela entrada padrão e por argumentos.
+
+----
+
+## Saída de dados
+
+A saída de dados padrão do Java é o terminal. Para utilizá-la é necessário utilzar
+o seguinte código:
+
+```
+ System.out.println("OlaUnipac");
+ ou
+ System.out.printf("A soma é %d%n", soma);
+```
+
+----
+
+## Caracteres especiais
+
+* \n Nova linha
+* \t Tab na horizontal
+* \r Retorna o cursor
+* \\\\ Barra
+* \" Aspas
+
+----
+
+## Entrada de dados - Scanner
+
+A classe Scanner realiza a leitura de dados da entrada padrão (teclado).
+
+```
+import java.util.Scanner;
+
+public class Somador {
+  public static void main(String[] args){
+
+    Scanner input = new Scanner(System.in);
+    int numero1;
+    int numero2;
+    int soma;
+
+    System.out.print("Digite o número 1 ");
+    numero1 = input.nextInt();
+    System.out.print("Digite o número 2 ");
+    numero2 = input.nextInt();
+    soma = numero1 + numero2;
+    System.out.printf("A soma é %d%n", soma);
+  }
+}
+```
+
+----
+
+## Entrada de dados - Args
+
+O args que está no método main é utilizado para a entrada de dados:
+
+```
+public class Echo {
+    public static void main (String[] args) {
+        for (String s: args) {
+            System.out.println(s);
+        }
+    }
+}
+```
+
+```
+javac Echo.java
+```
+
+```
+java Echo Drink Hot Java
+
+```
+
+```
+java Echo "Drink Hot Java"
+
+```
+
+----  ----
+
+# 5. Métodos
+
+Os métodos são conhecidos como funções, ações de execuções ou procedimentos, sendo responsáveis por ajudar no design do sistema (separação por blocos), e na reutilização de software, podendo ser aproveitados métodos já existentes para a construção de novos sistemas [DevMedia](http://www.devmedia.com.br/trabalhando-com-metodos-em-java/25917).
+
+
+----
+
+## Estrutura  
+
+<img src="img/metodos.jpg" width="500">
+
+
+----
+
+
+## Nomenclatura
+
+A primeira letra deve ser minúscula, e então as regras Camel Case normais devem ser usadas. Além disso, os nomes normalmente devem ser pares de verbos e substantivos.
+
+----
+
+## Local de criação
+
+Os métodos devem ser criados dentro da classe.
+
+----
+
+## Sobrecarga
+
+Em uma mesma classe pode haver vários métodos com o mesmo nome, contanto que possuam listas de argumentos distintas. Os argumentos podem variar em número, tipo e ordem de declaração.
+
+----
+
+## Exemplo de Sobrecarga
+
+```
+
+class MetodoSobrecarregado{
+
+	public void testaMetodosSobrecarregados()
+	{
+		System.out.printf("Salário em número inteiro = %d\n", salario(700));
+		System.out.printf("Salário em número double = %f\n", salario(7.500));
+	}
+
+	public int salario(int valorInt)
+	{
+		System.out.printf("\n Salário com argumento de inteiro = %d\n", valorInt);
+		return valorInt * valorInt;
+	}
+
+	public double salario( double valorDouble)
+	{
+		System.out.printf("\n Salário chamado com argumento de double = %f\n", valorDouble);
+		return valorDouble * valorDouble;
+	}
+}
+
+public class Test_Metodos_Sobrecarregados {
+
+	public static void main(String[] args) {
+
+		MetodoSobrecarregado testaM = new MetodoSobrecarregado();
+		testaM.testaMetodosSobrecarregados();
+	}
+}
+```
+
+----
+
+## Retorno de um método
+
+No Java um método deve informar o tipo de dados que retorna, ou informar que não retorna nada.
+
+----
+
+## Método sem retorno
+
+
+```
+
+class Metodo2{
+	public void escrever()
+	{
+		System.out.println("Método sem Retorno - VOID ");
+	}
+}
+
+public class Metodos_Sem_Retorno {
+
+	public static void main(String[] args) {
+
+		Metodo2 m = new Metodo2();
+		m.escrever();
+	}
+}
+
+```
+
+----
+
+## Método com retorno
+
+
+```
+class Metodo3{
+
+	String nome = "João Silva";
+
+	public String retornaNome()
+	{
+		return nome;
+	}
+}
+
+public class Metodo_Com_Retorno {
+
+	public static void main(String[] args) {
+
+		Metodo3 m3 = new Metodo3();
+		System.out.println(m3.retornaNome());
+
+	}
+
+}
+
+
+```
+
+----
+
+## Método Static
+
+Os métodos static ou métodos da classe são funções que não dependem de nenhuma
+variável de instância, quando invocados executam uma função sem a dependência do
+conteúdo de um objeto ou a execução da instância de uma classe, conseguindo
+chamar direto qualquer método da classe e também manipulando alguns campos da classe.
+
+----
+
+
+```
+class Soma{
+
+	public static int resultado(int num1, int num2){
+		return (num1 + num2);
+	}
+}
+
+public class TestaSomaEstatica {
+
+	public static void main(String[] args) {
+
+		System.out.println(Soma.resultado(10,50));
+	}
+}
+
+```
