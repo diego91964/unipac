@@ -489,7 +489,7 @@ float f1  = 123.4f;
 
 ----  ----
 
-# 3. Exercício prático
+# 3. Exercício prático (ex1)
 
 A forma mais simples de aprender a utilizar classes é criando cenários da vida real.
 
@@ -598,11 +598,161 @@ java Echo "Drink Hot Java"
 
 ----  ----
 
-# 5. Tipos de dados
+# 5. Métodos
+
+Os métodos são conhecidos como funções, ações de execuções ou procedimentos, sendo responsáveis por ajudar no design do sistema (separação por blocos), e na reutilização de software, podendo ser aproveitados métodos já existentes para a construção de novos sistemas [DevMedia](http://www.devmedia.com.br/trabalhando-com-metodos-em-java/25917).
+
 
 ----
 
-## String
+## Estrutura  
 
-O tipo de dados String já existe nativamente no Java, não sendo necesário a criação
-de um array de caracteres.
+<img src="img/metodos.jpg" width="500">
+
+
+----
+
+
+## Nomenclatura
+
+A primeira letra deve ser minúscula, e então as regras Camel Case normais devem ser usadas. Além disso, os nomes normalmente devem ser pares de verbos e substantivos.
+
+----
+
+## Local de criação
+
+Os métodos devem ser criados dentro da classe.
+
+----
+
+## Sobrecarga
+
+Em uma mesma classe pode haver vários métodos com o mesmo nome, contanto que possuam listas de argumentos distintas. Os argumentos podem variar em número, tipo e ordem de declaração.
+
+----
+
+## Exemplo de Sobrecarga
+
+```
+
+class MetodoSobrecarregado{
+
+	public void testaMetodosSobrecarregados()
+	{
+		System.out.printf("Salário em número inteiro = %d\n", salario(700));
+		System.out.printf("Salário em número double = %f\n", salario(7.500));
+	}
+
+	public int salario(int valorInt)
+	{
+		System.out.printf("\n Salário com argumento de inteiro = %d\n", valorInt);
+		return valorInt * valorInt;
+	}
+
+	public double salario( double valorDouble)
+	{
+		System.out.printf("\n Salário chamado com argumento de double = %f\n", valorDouble);
+		return valorDouble * valorDouble;
+	}
+}
+
+public class Test_Metodos_Sobrecarregados {
+
+	public static void main(String[] args) {
+
+		MetodoSobrecarregado testaM = new MetodoSobrecarregado();
+		testaM.testaMetodosSobrecarregados();
+	}
+}
+```
+
+----
+
+## Retorno de um método
+
+No Java um método deve informar o tipo de dados que retorna, ou informar que não retorna nada.
+
+----
+
+## Método sem retorno
+
+
+```
+
+class Metodo2{
+	public void escrever()
+	{
+		System.out.println("Método sem Retorno - VOID ");
+	}
+}
+
+public class Metodos_Sem_Retorno {
+
+	public static void main(String[] args) {
+
+		Metodo2 m = new Metodo2();
+		m.escrever();
+	}
+}
+
+```
+
+----
+
+## Método com retorno
+
+
+```
+class Metodo3{
+
+	String nome = "João Silva";
+
+	public String retornaNome()
+	{
+		return nome;
+	}
+}
+
+public class Metodo_Com_Retorno {
+
+	public static void main(String[] args) {
+
+		Metodo3 m3 = new Metodo3();
+		System.out.println(m3.retornaNome());
+
+	}
+
+}
+
+
+```
+
+----
+
+## Método Static
+
+Os métodos static ou métodos da classe são funções que não dependem de nenhuma
+variável de instância, quando invocados executam uma função sem a dependência do
+conteúdo de um objeto ou a execução da instância de uma classe, conseguindo
+chamar direto qualquer método da classe e também manipulando alguns campos da classe.
+
+----
+
+
+```
+class Soma{
+
+	public static int resultado(int num1, int num2){
+		return (num1 + num2);
+	}
+}
+
+public class TestaSomaEstatica {
+
+	public static void main(String[] args) {
+
+		System.out.println(Soma.resultado(10,50));
+	}
+}
+
+```
