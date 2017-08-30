@@ -763,7 +763,7 @@ public class TestaSomaEstatica {
 # Modificadores de Acesso
 
 Os modificadores de acesso são padrões de visibilidade de acessos às classes,
-atributos e métodos. Esses modificadores são palavras-chaves reservadas pelo Java,
+atributos e métodos. Esses modificadores são palavras-chave reservadas pelo Java,
 ou seja, palavras reservadas não podem ser usadas como nome de métodos, classes ou atributos.
 ( public , protected , private, default )
 
