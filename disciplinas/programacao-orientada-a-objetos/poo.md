@@ -738,6 +738,7 @@ chamar direto qualquer método da classe e também manipulando alguns campos da 
 
 ----
 
+## Exemplo de Método Static
 
 ```
 class Soma{
@@ -754,5 +755,127 @@ public class TestaSomaEstatica {
 		System.out.println(Soma.resultado(10,50));
 	}
 }
+
+```
+
+----  ----
+
+# Modificadores de Acesso
+
+Os modificadores de acesso são padrões de visibilidade de acessos às classes,
+atributos e métodos. Esses modificadores são palavras-chaves reservadas pelo Java,
+ou seja, palavras reservadas não podem ser usadas como nome de métodos, classes ou atributos.
+( public , protected , private, default )
+
+----
+
+## Modificador Default
+
+Uma classe com acesso padrão não possui modificador declarado. Isto permite que você tenha
+acesso ao nível de pacote, ou seja, uma classe com acesso padrão pode ser vista somente pelas
+classes dentro do mesmo pacote.
+
+----
+
+## Exemplo de Modificador default
+
+```
+
+package bebidas;
+class Bebida { }
+
+package br.unipac; // Erro
+import bebidas.Bebida;
+class Cha extends Bebida { }
+
+package bebidas;
+import bebidas.Bebida;
+class Cerveja extends Bebida { }
+
+```
+
+----
+
+## Modificador Public
+
+Uma declaração com o modificador public dá á todas as classes de todos os pacotes acesso à  este recurso
+(classe ou método). Mas, ainda é necessário utilizar o import
+
+
+
+----
+
+## Exemplo de Modificador public
+
+```
+
+package bebidas;
+public class Bebida { }
+
+package br.unipac;
+import bebidas.Bebida;
+class Cha extends Bebida { }
+
+```
+
+
+## Modificador Private
+
+Uma declaração marcada como privada não podem ser acessadas por códigos em qualquer classe
+diferente da Classe de origem. Este modificador pode ser aplicado a métodos e e atributos de classe
+
+----
+
+## Exemplo de Modificador private
+
+
+```
+
+package br.edu.unipac.exercicios.ex1;
+
+public class Memoria {
+
+	private String modelo;
+	private Integer capacidadeEmGb;
+
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+}
+
+```
+
+----
+
+## Modificador Protected
+
+
+Os níveis de controle de acesso protected e default são semelhantes, mas com uma
+diferença crítica. Um membro default só pode ser acessado se a classe que está acessando
+pertence ao mesmo pacote, enquanto um membro protected pode ser acessado
+por meio da herança) por uma subclasse, mesmo que a subclasse esteja em um pacote diferente.
+
+
+----
+
+## Exemplo de Modificador protected
+
+
+```
+
+package bebidas;
+protected class Bebida { }
+
+package br.unipac;
+import bebidas.Bebida;
+class Cha extends Bebida { }
+
+package bebidas;
+import bebidas.Bebida;
+class Cerveja extends Bebida { }
 
 ```
