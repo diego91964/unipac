@@ -818,6 +818,8 @@ class Cha extends Bebida { }
 
 ```
 
+----
+
 
 ## Modificador Private
 
