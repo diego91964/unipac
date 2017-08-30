@@ -881,3 +881,11 @@ import bebidas.Bebida;
 class Cerveja extends Bebida { }
 
 ```
+
+----
+
+
+# Exercício
+
+Faça a
+[lista de exercícios ](https://github.com/diego91964/unipac/blob/master/disciplinas/programacao-orientada-a-objetos/exercicios.md) para treinar seus conhecimentos.
