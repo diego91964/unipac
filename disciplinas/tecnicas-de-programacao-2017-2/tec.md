@@ -171,6 +171,7 @@ A escrita de um programa define como o software irá interagir com o usuário
 
 ----
 
+## Printf
 
 * (%05d) Cria um número de 5 caracteres, caso seja menor, completa o mesmo com zeros (acrescenta casas decimais a esquerda)
 
@@ -182,6 +183,7 @@ A escrita de um programa define como o software irá interagir com o usuário
 
 ----
 
+## Printf
 
 * (%i ) Imprime um inteiro
 
@@ -194,6 +196,8 @@ A escrita de um programa define como o software irá interagir com o usuário
 * (%F) É semelhante ao %f, mas em caso de número infinitos os caracteres são representados em maiúsculo
 
 ----
+
+## Printf
 
 * (%e or %E) Imprime em notação científica. Ex 3*10^7 -> 3e7
 
@@ -288,7 +292,7 @@ Pois, é a partir disso que o usuário irá interagir com o software.
 
 ----
 
-
+## Scanf
 
 * (%d) Lê um inteiro e armazena em um int (inteiro positivo ou negativo)
 
@@ -301,7 +305,7 @@ tamanho de leitura pode ser especificado ( "%10s").
 
 ----
 
-
+## Scanf
 
 
 * (%u) Lê um inteiro sem sinal e armazena em um unsigned int.
@@ -315,6 +319,7 @@ tamanho de leitura pode ser especificado ( "%10s").
 
 ----
 
+## Scanf
 
 
 * (%c) Lê um caractere e armazena em um char, caso o tamanho seja especificado ("%12c"), você deverá armazenar o valor em um vetor.
@@ -366,3 +371,126 @@ char s[100];
   return 0;
 }
 ```
+
+Note:
+```
+#include <stdio.h>
+main(t,_,a)
+char *a;
+{
+return!0<t?t<3?main(-79,-13,a+main(-87,1-_,main(-86,0,a+1)+a)):
+1,t<_?main(t+1,_,a):3,main(-94,-27+t,a)&&t==2?_<13?
+main(2,_+1,"%s %d %d\n"):9:16:t<0?t<-72?main(_,t,
+"@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l+,/n{n+,/+#n+,/#\
+;#q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l \
+q#'+d'K#!/+k#;q#'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw' i;# \
+){nl]!/n{n#'; r{#w'r nc{nl]'/#{l,+'K {rw' iK{;[{nl]'/w#q#n'wk nw' \
+iwk{KK{nl]!/w{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c \
+;;{nl'-{}rw]'/+,}##'*}#nc,',#nw]'/+kd'+e}+;#'rdq#w! nr'/ ') }+}{rl#'{n' ')#\
+}'+}##(!!/")
+  :t<-50?_==*a?putchar(31[a]):main(-65,_,a+1):main((*a=='/')+t,_,a+1)
+    :0<t?main(2,2,"%s"):*a=='/'||main(0,main(-61,*a,
+"!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m .vpbks,fxntdCeghiry"),a+1);
+}
+
+```
+
+----  ----
+
+# Operadores Aritméticos
+
+----  ----
+
+
+# Estrutura de Controle
+
+As estruturas de controle são utilizadas para fazer a verificação de condições
+e executar ações a partir disto.
+
+----
+
+## Bloco if/else
+
+
+----
+
+
+## Switch/case
+
+----
+
+
+## Inline Conditions
+
+
+
+
+----  ----
+
+#  Estrutura de Repetição
+
+----
+
+## Laço for
+
+----
+
+## Laço While
+
+----
+
+## Laço do/while
+
+
+----
+
+
+## Laço Aninhado
+
+----
+
+## Comando break
+
+
+## Comando continue
+
+----  ----
+
+# Vetor
+
+## Criação de um Vetor
+
+## Acessando elementos de um Vetor
+
+## Imprimindo um Vetor
+
+----  ----
+
+# Struct
+
+----
+
+## Introdução a Struct
+
+----
+
+
+## Trabalhando com estruturas
+
+----
+
+## Array de estruturas
+
+----
+
+## Estruturas aninhadas
+
+----
+
+----  ----
+
+# Ponteiro e Alocação de Memória
+
+----  ----
+
+# Manipulação de Arquivos
