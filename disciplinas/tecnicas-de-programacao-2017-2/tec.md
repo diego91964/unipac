@@ -151,11 +151,14 @@ Algoritmo para fazer compras:
 
 A escrita de um programa define como o software irá interagir com o usuário
 
+[Material Complementar](https://www.youtube.com/watch?v=07YPObbEpU8)
+
+[Fonte: Brian Hall](http://beej.us/guide/bgc/output/html/multipage/printf.html)
 
 ----
 
 
-## Leitura (printf)
+## Escrita (printf)
 
 
 * (%d) Imprime o proximo argumento, o número deve ser um int
@@ -288,6 +291,8 @@ int main () {
 É muito importante entender como é feita a entrada de dados na linguagem C.
 Pois, é a partir disso que o usuário irá interagir com o software.
 
+[Material Complementar](https://www.youtube.com/watch?v=yQx8sD6vK6M)
+
 [Fonte: Brian Hall](http://beej.us/guide/bgc/output/html/multipage/scanf.html)
 
 ----
@@ -373,6 +378,7 @@ char s[100];
 ```
 
 Note:
+
 ```
 #include <stdio.h>
 main(t,_,a)
@@ -385,7 +391,7 @@ main(2,_+1,"%s %d %d\n"):9:16:t<0?t<-72?main(_,t,
 ;#q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l \
 q#'+d'K#!/+k#;q#'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw' i;# \
 ){nl]!/n{n#'; r{#w'r nc{nl]'/#{l,+'K {rw' iK{;[{nl]'/w#q#n'wk nw' \
-iwk{KK{nl]!/w{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c \
+iwk{KK{nl]!/w{ %'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c \
 ;;{nl'-{}rw]'/+,}##'*}#nc,',#nw]'/+kd'+e}+;#'rdq#w! nr'/ ') }+}{rl#'{n' ')#\
 }'+}##(!!/")
   :t<-50?_==*a?putchar(31[a]):main(-65,_,a+1):main((*a=='/')+t,_,a+1)
@@ -410,6 +416,12 @@ e executar ações a partir disto.
 ----
 
 ## Bloco if/else
+
+
+----
+
+
+## Bloco else if
 
 
 ----
@@ -451,6 +463,7 @@ e executar ações a partir disto.
 
 ## Comando break
 
+----
 
 ## Comando continue
 
@@ -458,9 +471,15 @@ e executar ações a partir disto.
 
 # Vetor
 
+----
+
 ## Criação de um Vetor
 
+----
+
 ## Acessando elementos de um Vetor
+
+----
 
 ## Imprimindo um Vetor
 
