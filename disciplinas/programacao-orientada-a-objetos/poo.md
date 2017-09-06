@@ -32,6 +32,7 @@ Os principais aspectos são: Objetos, Classes, Métodos, Instanciação, Reuso, 
 tal ideia foi vendida para a Xerox que criou a linguagem Smaltalk."
 
 [Fonte: The University of Tennessee](http://web.eecs.utk.edu/~huangj/CS302S04/notes/oo-intro.html)
+[Material Complementar](https://www.youtube.com/watch?v=sTX0UEplF54)
 
 Note:
 A criação da orientação a objetos foi em 1970.
@@ -50,6 +51,8 @@ para a modelagem de objetos do mundo real, como:
 
 Um objeto possui um conjunto de dados, sendo capaz de armazenar dados e realizar operações com eles.
 Não é necessário mostrar como tais operações foram implementadas.
+
+[Material Complementar](https://youtu.be/aR7CKNFECx0)
 
 Note:
 Um carro pode ser considerado um objeto. O mesmo possui operações, como:
@@ -249,6 +252,8 @@ A linguagem utilizada para esta disciplina será Java.
 
 [Solaris](https://www.java.com/en/download/help/download_options.xml#solaris)
 
+[Material Complementar](https://www.youtube.com/watch?v=yWU5bm_pZzY)
+
 ----
 
 ## Instalação JDK
@@ -295,6 +300,9 @@ O Java permite que você crie bibliotecas para a linguagem, ajudando assim no re
 1. Criar o código fonte (Editor)
 
 ```
+
+package br.unipac
+
 public class OlaUnipac {
 
     public static void main(String[] args) {
@@ -342,6 +350,9 @@ para certifique-se de que eles são válidos e não violam as restrições de se
 ## Fases de um Programa (6)
 
 6. Execução do Programa
+
+[Material Complementar](https://www.youtube.com/watch?v=v_ZCtgwbS3o)
+[Material Complementar](https://www.youtube.com/watch?v=ijXXaIYsVx4)
 
 Note:
 As JVM de hoje geralmente executam bytecodes usando uma combinação de interpretação
@@ -462,7 +473,7 @@ public class Calculadora {
 Java é uma linguagem fortemente tipada, sendo assim, é necessário informar o
 tipo de uma variável em sua declaração, e o mesmo nunca poderá ser alterado.
 
-
+[Material Complementar](https://www.youtube.com/watch?v=JEAQeT7YGs4)
 ----
 
 
@@ -602,6 +613,9 @@ java Echo "Drink Hot Java"
 
 Os métodos são conhecidos como funções, ações de execuções ou procedimentos, sendo responsáveis por ajudar no design do sistema (separação por blocos), e na reutilização de software, podendo ser aproveitados métodos já existentes para a construção de novos sistemas [DevMedia](http://www.devmedia.com.br/trabalhando-com-metodos-em-java/25917).
 
+Note:
+
+[Material Complementar](https://youtu.be/wNaoX6VOj54)
 
 ----
 
