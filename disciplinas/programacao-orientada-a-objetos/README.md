@@ -825,7 +825,7 @@ public class VetorDeObjetos {
 A linguagem Java ainda fornece algumas APIs que permitem armazenar objetos, uma delas
 é a interface[List](https://docs.oracle.com/javase/7/docs/api/java/util/List.html), que pode ser implementada por uma séria de Classes:
 
-<div style="text-align: left"> 
+<div style="text-align: left">
 
 * [ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 * [AbstractList](https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html)
@@ -1022,6 +1022,7 @@ Java é uma linguagem fortemente tipada, sendo assim, é necessário informar o
 tipo de uma variável em sua declaração, e o mesmo nunca poderá ser alterado.
 
 [Material Complementar](https://www.youtube.com/watch?v=JEAQeT7YGs4)
+
 ----
 
 
@@ -1031,7 +1032,7 @@ Os tipos primitivos em Java são aqueles que guardam o valor real das variáveis
 São tipos primitivos em JAVA: byte, short, int, long, float, double, char.
 
 
-[Fonte](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+[Fonte: Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 
 Note:
 Um inteiro literal é de tipo longo se termina com a letra L ou l; Caso contrário, é do tipo int.
