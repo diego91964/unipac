@@ -1456,4 +1456,327 @@ Faça a
 
 ----  ----
 
-# Propriedades
+# Propriedades e Relacionamentos
+
+Neste capítulo vamos definir algumas propriedades e relacionamentos que podem ocorrer entre as classes.
+
+[Material Complementar](https://youtu.be/GLHbxDU9iBA)
+
+----
+
+## Associação
+
+Uma associação consiste em um relacionametno entre objetos destas classes, ou seja, elas estão conectadas por um aspecto.
+
+```
+
+public class Cliente {
+
+	String nome;
+
+}
+
+public class Pedido {
+
+	String descricao;
+	Cliente cliente;
+}
+
+public class MainAssociacao {
+
+	public static void main(String[] args) {
+
+		Cliente cliente1 = new Cliente("Cliente1");
+
+		Pedido pedido1 = new Pedido("Pedido-1", cliente1);
+
+		Pedido pedido2 = new Pedido("Pedido-2", cliente1);
+
+		System.out.println(pedido1);
+
+		System.out.println(pedido2);
+	}
+}
+
+```
+
+----
+
+## Agregação
+
+
+É uma forma de associação utilizada para mostrar que um tipo de objeto é composto, pelo menos em parte, de outro em uma relação todo/parte. Indicando que o objeto parte "é um atributo" do objeto todo, onde o ciclo de vida do objeto parte é limitado ao ciclo de vida do objeto todo.
+
+
+```
+
+----------------
+
+public class Aluno {
+
+	String nome;
+
+}
+
+----------------
+
+import java.util.Arrays;
+
+public class Turma {
+
+	Aluno [] alunos;
+
+}
+
+----------------
+
+public class MainAgregacao {
+
+	public static void main(String[] args) {
+
+		Aluno aluno1 = new Aluno("Aluno1");
+		Aluno aluno2 = new Aluno("Aluno2");
+		Aluno aluno3 = new Aluno("Aluno1");
+
+		Aluno  alunos [] = new Aluno[]{aluno1,aluno2,aluno3};
+
+		Turma turma = new Turma(alunos);
+
+		// Turma é uma agregação de alunos, mas alunos existem sem turma
+		System.out.println(turma);
+	}
+ }
+
+
+```
+
+----
+
+## Composição
+
+Também é uma forma de associação, mas, temos dois tipos de objetos, um representa o 'todo' e outro uma 'parte', ou seja, um
+objeto é composto de outros. Mas, caso o objeto 'todo' não exista, não faz sentido os objetos 'parte' existirem.
+
+```
+
+import java.util.Arrays;
+
+public class Cardapio {
+
+	ItemCardapio [] item;
+
+  //Adicionar Construtor e toString
+
+}
+
+----------------
+
+public class ItemCardapio {
+
+	String descricao;
+
+  //Adicionar Construtor e toString
+
+}
+
+----------------
+
+public class MainComposicao {
+
+	public static void main(String[] args) {
+
+		ItemCardapio item1 = new ItemCardapio("Arroz");
+		ItemCardapio item2 = new ItemCardapio("Feijão");
+
+		ItemCardapio[] itens = new ItemCardapio[] {item1,item2};
+
+		Cardapio cardapio = new Cardapio(itens);
+
+		System.out.println(cardapio);
+
+	}
+}
+```
+
+----
+
+## Generalização
+
+A generalização é um tipo de relação onde existe um elemento mais geral e outro mais específico. O elemento
+específico contém tudo que o geral tem mais as suas especifidades.
+
+```
+public class Aluno extends Pessoa {
+
+	String matricula;
+
+  //Adicionar Construtor e toString
+
+}
+
+----------------
+
+public class Docente extends Pessoa{
+
+	String carteiraDeTrabalho;
+
+  //Adicionar Construtor e toString
+
+}
+
+----------------
+
+public class Pessoa {
+
+	String nome;
+
+  //Adicionar Construtor e toString
+
+
+
+}
+
+----------------
+
+public class MainGeneralizacao {
+
+
+	public static void main(String[] args) {
+
+		Aluno aluno = new Aluno("Aluno-1", "1111111");
+
+		System.out.println(aluno);
+
+		Docente docente = new Docente("Docente-1", "22222222");
+
+		System.out.println(docente);
+
+		Pessoa p = aluno;
+
+		System.out.println("Aluno: "+ p);
+
+		p = docente;
+
+		System.out.println("Docente: "+ p);
+
+    p = new Pessoa("Pessoa");
+	}
+
+}
+
+```
+
+----
+
+
+## Classe Abstrata
+
+Quando o elemento mais genérico é apenas uma definição, ou seja, não podemos criar um objeto dele, utilizamos
+as classes abstratas. Estas classes podem apenas ser herdadas e não podem gerar novas instâncias.
+
+
+```
+public class MainAbstracao {
+
+
+
+	public static void main(String[] args) {
+
+
+		ContaCorrente cc = new ContaCorrente();
+		ContaPoupanca cp = new ContaPoupanca();
+
+		System.out.println("Classe: "+ cc.getClass().getName());
+		System.out.println("Classe pai: "+ cc.getClass().getSuperclass().getName());
+
+		System.out.println("Classe: "+ cp.getClass().getName());
+		System.out.println("Classe pai: "+ cp.getClass().getSuperclass().getName());
+
+		//Para criar uma instância de conta seria necessário implementar o método abstrato
+
+		Conta c = new Conta() {
+
+			@Override
+			public Double calculaJuros() {
+				return null;
+			}
+		};
+	}
+}
+
+
+```
+
+[Material Complementar](https://www.caelum.com.br/apostila-java-orientacao-objetos/classes-abstratas/#9-7-desafios)
+
+----
+
+
+## Interface
+
+As interfaces representam um contrato, ou seja, uma garantia que determinados métodos serão implementados por uma classe.
+
+
+```
+public interface Calculador {
+
+	Integer calucla(Integer n1, Integer n2);
+}
+
+----------------
+
+public class CalculadoraSoma implements Calculador{
+
+	@Override
+	public Integer calucla(Integer n1, Integer n2) {
+		return n1 + n2;
+	}
+
+}
+
+----------------
+
+public class CalculadoraSubtracao implements Calculador{
+
+	@Override
+	public Integer calucla(Integer n1, Integer n2) {
+		return n1 - n2;
+	}
+
+
+}
+
+----------------
+
+public class MainInterface {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Digite a operação");
+		String op = s.next().trim();
+
+		System.out.println("Digite n1\n");
+		Integer n1 = s.nextInt();
+
+		System.out.println("Digite n2\n");
+		Integer n2 = s.nextInt();
+
+		switch (op) {
+		case "+":
+			System.out.println(new CalculadoraSoma().calucla(n1, n2));
+			break;
+		case "-":
+			System.out.println(new CalculadoraSubtracao().calucla(n1, n2));
+			break;
+		default:
+			System.out.println("Operação não conhecida");
+			break;
+		}
+
+		s.close();
+	}
+}
+
+```
+[Material Complementar](https://www.caelum.com.br/apostila-java-orientacao-objetos/interfaces/#10-1-aumentando-nosso-exemplo)
