@@ -375,7 +375,404 @@ A primeira função a ser executada em um programa escrito em Java será a funç
     public static void main(String[] args)
 ```
 
+Note:
+O Java possui algumas palavras reservadas, ou seja, não podem ser utilizada para nomear
+classes, métodos e variáveis. São elas:
+
+abstract, boolean, break, byte, case, catch, char, class, const, continue, default, do, double, else, extends, final, finally, float, for, goto, if, implements, import, instanceof, int, interface, long, native, new, package, private, protected, public, return, short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, try, void, volatile, while, assert e enum.
+
+----  ----
+
+# Estruturas
+
+Assim como outras linguagens, a linguagem Java possui diversas estruturas de controle e repetição.
+Uma grande diferença para a linguagem C seria a estrutura foreach.
+
 ----
+
+## Estruturas de Controle
+
+As estruturas de controle são responsáveis por alterar o fluxo do programa se baseano em condições.
+
+----
+
+## Equal x ==
+
+Quando a comparação '==' é utilizada, apenas o que está 'escrito' é comparado. O método equals compara
+realmente o valor que está no objeto. Assim como toString, é possível implementar o método equals em uma classe.
+
+
+```
+
+
+public class MainEqual {
+
+	public static void main(String[] args) {
+
+		String s1 = new String( "teste" );
+        String s2 = new String( "teste" );
+
+        System.out.println( s1 == s2 );
+        System.out.println( s1.equals( s2 ));
+
+	}
+}
+
+
+
+```
+
+
+----
+
+## Equal x ==
+
+```
+
+public class ClasseA {
+
+    public String s;
+    public static String s2  = "teste2";
+
+    ClasseA() {
+        this.s = new String( "teste" );
+    }
+}
+
+
+
+public class MainEqual {
+
+	public static void main(String[] args) {
+
+		String s1 = new String( "teste" );
+
+
+        ClasseA a1 = new ClasseA();
+        ClasseA a2 = new ClasseA();
+
+        System.out.println( a1 == a2 );
+        System.out.println( a1.s == a2.s );
+        System.out.println( ClasseA.s2 == ClasseA.s2 );
+        System.out.println( a1.s.equals( a2.s ) );
+
+	}
+}
+
+```
+
+----
+
+## Equal x ==
+
+```
+
+public class ClasseB {
+
+	 public String s;
+
+	 ClasseB() {
+	        this.s = new String( "teste" );
+	    }
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClasseB other = (ClasseB) obj;
+		if (s == null) {
+			if (other.s != null)
+				return false;
+		} else if (!s.equals(other.s))
+			return false;
+		return true;
+	}
+
+
+}
+
+public class MainEqual {
+
+	public static void main(String[] args) {
+
+        ClasseB b1 = new  ClasseB();
+        ClasseB b2 = new  ClasseB();
+
+        System.out.println( b1 == b2 );
+        System.out.println( b1.equals(b2));
+	}
+}
+
+
+
+
+```
+
+----
+
+## Condição IF
+
+A estrutura IF assim como em Java, utiliza uma condição booleana para controlar o fluxo do código, mas,
+é importante lembrar que em Java existe o tipo boolean diferente de C que o resultado seria 0 ou 1.
+
+
+```
+
+public class MainIfElse {
+
+	public static void main(String[] args) {
+
+		if (true){
+			System.out.println("Existe o tipo True");
+		}
+
+		Integer teste = new Integer ((int) Math.random());
+
+		if (teste > 10){
+			System.out.println("Maior que 10");
+		}else {
+			System.out.println("Menor que 10");
+		}
+	}
+}
+
+```
+
+----
+
+## Condição switch case
+
+A estrutura condicional Switch/Case é utilizada quando se tem vários casos de comparação
+com poucas ações a serem executadas em cada caso:
+
+```
+
+
+import java.util.Scanner;
+
+public class MainSwitchCaseJava {
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+
+		Integer x = s.nextInt();
+
+		switch (x) {
+		case 1:
+			System.out.println("O número 1 foi lido");
+			break;
+		default:
+			System.out.println("Outro número foi lido");
+			break;
+		}
+
+		String diaSemana = s.next();		
+		String tipoDoDia;
+
+	    switch (diaSemana) {
+	         case "Segunda-Feira": tipoDoDia = "Início da Semana";
+	             break;
+	         case "Terça-Feira":
+	         case "Quarta-Feira":
+	         case "Quinta-Feira":
+	        	 tipoDoDia = "Meio a semana";
+	             break;
+	         case "Sexta-Feira":
+	        	 tipoDoDia = "Fim da Sema";
+	             break;
+	         case "Sábado":
+	         case "Domingo":
+	        	 tipoDoDia = "Acabou!";
+	             break;
+	         default:
+	             throw new IllegalArgumentException("Dia da semana inválido");
+	     }
+
+	    System.out.println(tipoDoDia);
+
+		// O Switch não funciona para String em versóes abaixo de Java 7
+
+	    s.close();
+	}
+}
+
+```
+
+
+----
+
+## Inline Contidion
+
+São um tipo de condição que utiliza um operador ternário para realizar ações com base no resultado de uma operação.
+Normalmente é utilizado para realizar atribuições mediante condição.
+
+```
+public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+
+		int a;
+
+		int i = s.nextInt();
+
+		if (i == 0)
+		{
+		    a = 10;
+		}
+		else
+		{
+		    a = 5;
+		}
+
+		a = (i == 0) ? 10:5;
+
+		s.close();
+	}
+
+```
+
+
+----
+
+## Estruturas de Repetição
+
+As estruturas de Repetição são utilizadas para repetir a execução de determinadas ações se baseando em uma condição específica.
+
+
+----
+
+## Estrutura FOR
+
+```
+
+public class MainFor {
+
+	public static void main(String[] args) {
+
+		for(int i = 0 ; i < 10; i++){
+			//Executa este bloco de código 10 vezes
+			System.out.println("Você está no indicia "+ i);
+		}
+	}
+}
+```
+
+----
+
+## Estrutura While
+
+Assim como o for, o while se baseai em uma condição. Porém a estrutura for possui um controle
+do índice que ele está trabalhando, já no while o programador terá que fazer este trabalho.
+
+```
+
+public class MainWhile {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Digite um valor menor que zero");
+		Integer num = s.nextInt();
+
+		while (num > 0) {
+			System.out.println("Digite um valor menor que zero");
+			num = s.nextInt();
+		}
+
+		System.out.println("Obrigado, até mais!");
+		s.close();
+
+	}
+}
+```
+
+----
+
+## Estrutura do While
+
+A diferença entre o 'while' e o 'do/while' é que no 'while' temos uma pré-condição para o código executar,
+já no 'do/while' existe uma pós-condição para que o bloco continue sendo executado. Ou seja,
+no 'do/while' o código sempre irá executar pelo menos uma vêz;
+
+
+```
+
+public class MainDoWhile {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		Integer num;
+
+		do {
+			System.out.println("Digite um valor menor que zero");
+			num = s.nextInt();
+		}while (num > 0);
+
+		System.out.println("Obrigado, até mais!");
+		s.close();
+
+	}
+}
+
+```
+
+
+----
+
+
+## Vetores
+
+Vetores é utilizado quando existe a necessidade de se trabalhar com um conjunto de variáveis que está no mesmo conceito,
+como exemplo seria um conjunto de 5 idades:
+
+```
+public class VetorSimples {
+
+	public static void main(String[] args) {
+		int idade1,idade2,idade3,idade4,idade5; //Declaração sem vetor
+
+		Scanner s = new Scanner(System.in);
+
+		int[] idades = new int [5];
+
+		for (int i = 0 ; i < 5; i++){
+			//Lendo valores para o vetor
+			idades[i] = s.nextInt();
+		}
+
+
+		for (int i = 0 ; i < 5; i++){
+			//Imprindo elementos do vetor
+			System.out.println(idades[i]);
+		}
+
+		s.close();
+	}
+}
+
+```
+
+[Material Complementar](https://www.caelum.com.br/apostila-java-orientacao-objetos/um-pouco-de-arrays/#5-1-o-problema)
+
+----
+
+## Listas
+
+
+----
+
+## Estrutura For Each
+
+
+----
+
 
 ## Comentário
 
@@ -903,3 +1300,8 @@ class Cerveja extends Bebida { }
 
 Faça a
 [lista de exercícios ](https://github.com/diego91964/unipac/blob/master/disciplinas/programacao-orientada-a-objetos/exercicios.md) para treinar seus conhecimentos.
+
+
+----  ----
+
+# Propriedades
