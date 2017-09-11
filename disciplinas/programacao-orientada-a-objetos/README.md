@@ -774,6 +774,8 @@ Pessoa[] pessoas;
 pessoas = new Pessoa[5];
 
 ```
+Note:
+
 Quantas pessoas foram criadas aqui? Na verdade, nenhuma. Foram criados 5 espaços que você pode utilizar para guardar uma referência a uma Pessoa. Por enquanto, eles se referenciam para lugar nenhum (null).
 
 ----
@@ -823,6 +825,8 @@ public class VetorDeObjetos {
 A linguagem Java ainda fornece algumas APIs que permitem armazenar objetos, uma delas
 é a interface[List](https://docs.oracle.com/javase/7/docs/api/java/util/List.html), que pode ser implementada por uma séria de Classes:
 
+<div style="text-align: left"> 
+
 * [ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 * [AbstractList](https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html)
 * [AbstractSequentialList](https://docs.oracle.com/javase/7/docs/api/java/util/AbstractSequentialList.html)
@@ -833,6 +837,8 @@ A linguagem Java ainda fornece algumas APIs que permitem armazenar objetos, uma 
 * [RoleUnresolvedList](https://docs.oracle.com/javase/7/docs/api/javax/management/relation/RoleUnresolvedList.html)
 * [Stack](https://docs.oracle.com/javase/7/docs/api/javax/management/relation/RoleUnresolvedList.html)
 * [Vector](https://docs.oracle.com/javase/7/docs/api/java/util/Vector.html)
+
+</div>
 
 ----
 
