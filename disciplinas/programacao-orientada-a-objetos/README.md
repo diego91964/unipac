@@ -383,7 +383,7 @@ abstract, boolean, break, byte, case, catch, char, class, const, continue, defau
 
 ----  ----
 
-# Estruturas
+# Revisão: Estruturas
 
 Assim como outras linguagens, a linguagem Java possui diversas estruturas de controle e repetição.
 Uma grande diferença para a linguagem C seria a estrutura foreach.
@@ -396,7 +396,7 @@ As estruturas de controle são responsáveis por alterar o fluxo do programa se 
 
 ----
 
-## Equal x ==
+## Equal vs ==
 
 Quando a comparação '==' é utilizada, apenas o que está 'escrito' é comparado. O método equals compara
 realmente o valor que está no objeto. Assim como toString, é possível implementar o método equals em uma classe.
@@ -425,7 +425,7 @@ public class MainEqual {
 
 ----
 
-## Equal x ==
+## Equal vs ==
 
 ```
 
@@ -463,7 +463,7 @@ public class MainEqual {
 
 ----
 
-## Equal x ==
+## Equal vs ==
 
 ```
 
@@ -939,7 +939,7 @@ public class OlaUnipac {
 
 ----
 
-## Métodos
+## Estrutura da Classe: Métodos
 
 Um objeto pode executar as ações, essas ações possíveis são definidas em seus métodos.
 
@@ -962,7 +962,7 @@ public class Unipac {
 
 ----
 
-## Declaração de Variáveis
+## Estrutura da Classe: Declaração de Variáveis
 
 As variáveis no java podem ser locais, ou seja, são declaradas no bloco em que são usadas.
 Ou ainda, variáveis de instância, que são declaradas nas classes do bloco.
