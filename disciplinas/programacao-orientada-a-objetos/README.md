@@ -727,7 +727,7 @@ public class MainDoWhile {
 ----
 
 
-## Vetores
+## Vetoresou Array
 
 Vetores é utilizado quando existe a necessidade de se trabalhar com um conjunto de variáveis que está no mesmo conceito,
 como exemplo seria um conjunto de 5 idades:
@@ -761,15 +761,160 @@ public class VetorSimples {
 
 [Material Complementar](https://www.caelum.com.br/apostila-java-orientacao-objetos/um-pouco-de-arrays/#5-1-o-problema)
 
+
 ----
 
+
+## Vetores  ou Array
+
+Em Java é possível criar vetores de objetos, porém quando criamos uma array de alguma classe, ela possui apenas referências. O objeto, como sempre, está na memória principal e, no vetor, só ficam guardadas as referências (endereços).
+
+```
+Pessoa[] pessoas;
+pessoas = new Pessoa[5];
+
+```
+Quantas pessoas foram criadas aqui? Na verdade, nenhuma. Foram criados 5 espaços que você pode utilizar para guardar uma referência a uma Pessoa. Por enquanto, eles se referenciam para lugar nenhum (null).
+
+----
+
+## Exemplo de vetor
+
+```
+
+## Exemplo Vetor de Objetos
+
+
+public class VetorDeObjetos {
+
+	public static void main(String[] args) {
+
+		Pessoa [] pessoas = new Pessoa[5];
+
+
+		System.out.println("Antes de Adicionar objetos --------------------------------------------------------------\n");
+		// O que há no vetor? Apenas referências
+		for (int i = 0 ; i < 5 ; i++){
+			System.out.println(pessoas[i]);
+		}
+
+		System.out.println("Depois de Adicionar objetos --------------------------------------------------------------"\n);
+
+		//Inserindo objetos
+		for (int i = 0 ; i < 5 ; i++){
+			pessoas[i] = new Pessoa(i*5, "Pessoa"+i);
+		}
+
+		// O que há no vetor? Refências a objetos existentes
+		for (int i = 0 ; i < 5 ; i++){
+			System.out.println(pessoas[i]);
+		}
+
+	}
+}
+
+```
+
+----
+
+
 ## Listas
+
+A linguagem Java ainda fornece algumas APIs que permitem armazenar objetos, uma delas
+é a interface[List](https://docs.oracle.com/javase/7/docs/api/java/util/List.html), que pode ser implementada por uma séria de Classes:
+
+* [ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
+* [AbstractList](https://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html)
+* [AbstractSequentialList](https://docs.oracle.com/javase/7/docs/api/java/util/AbstractSequentialList.html)
+* [CopyOnWriteArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CopyOnWriteArrayList.html)
+* [AttributeList](https://docs.oracle.com/javase/7/docs/api/javax/management/AttributeList.html)
+* [LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+* [RoleList](https://docs.oracle.com/javase/7/docs/api/javax/management/relation/RoleList.html)
+* [RoleUnresolvedList](https://docs.oracle.com/javase/7/docs/api/javax/management/relation/RoleUnresolvedList.html)
+* [Stack](https://docs.oracle.com/javase/7/docs/api/javax/management/relation/RoleUnresolvedList.html)
+* [Vector](https://docs.oracle.com/javase/7/docs/api/java/util/Vector.html)
+
+----
+
+
+## Listas
+
+A Interface [List](https://docs.oracle.com/javase/7/docs/api/java/util/List.html) fornece uma séria de métodos que
+facilitam o trabalho de quem está utilizando. Como implementação de exemplo, utilizaremos o [ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html).
+
+```
+public class MainListas {
+
+	public static void main(String[] args) {
+
+		ArrayList<Pessoa> pessoas = new ArrayList<>();
+
+		//Inserindo objetos (Não é necessário utilizar o índice)
+		for (int i = 0 ; i < 50 ; i++){
+			pessoas.add(new Pessoa(i*5, "Pessoa"+i));
+		}
+
+		//Buscando Objetos pelo índice
+		System.out.println(pessoas.get(2));
+
+		//Removendo Objetos pelo índice
+		System.out.println(pessoas.remove(3));
+
+		System.out.println(pessoas.get(3));
+
+
+	}
+}
+
+```
 
 
 ----
 
 ## Estrutura For Each
 
+Quando utilizamos vetores ou listas e não necessitamos do índice que estamos percorrendo o vetor, podemos
+utilizar uma estrutura de repetição muito interessante, o for each, que irá percorrer todo o vetor retornando os elementos
+na ordem que estão inseridos.
+
+```
+import java.util.ArrayList;
+
+import br.edu.unipac.exemplos.vetores.Pessoa;
+
+public class MainForEach {
+
+	public static void main(String[] args) {
+
+		ArrayList<Pessoa> pessoasList = new ArrayList<>();
+
+		//Inserindo objetos (Não é necessário utilizar o índice)
+		for (int i = 0 ; i < 10 ; i++){
+			pessoasList.add(new Pessoa(i*5, "PessoaList"+i));
+		}
+
+		// Utilizando o foreach para acessar elementos
+		for (Pessoa pessoa : pessoasList){
+			System.out.println(pessoa);
+		}
+
+		System.out.println("\n--\n");
+
+
+		Pessoa [] pessoasVetor = new Pessoa[5];
+
+		// Adicionando elementos no vetor (é necessário utilizar o índice
+		for (int i = 0 ; i < 5 ; i++){
+			pessoasVetor[i] = new Pessoa(i*5, "PessoaVetor"+i);
+		}
+
+		// Utilizando o foreach para acessar elementos
+		for (Pessoa pessoa : pessoasVetor){
+			System.out.println(pessoa);
+		}
+	}
+}
+```
 
 ----
 
