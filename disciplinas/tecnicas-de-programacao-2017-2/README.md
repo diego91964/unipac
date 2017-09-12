@@ -676,31 +676,267 @@ Ex.: Faça um programa que leia um número e imprima o próximo número par a pa
 
 #  Estrutura de Repetição
 
+As estruturas de repetição são utilizadas para repetir partes do código. Com as estruturas de repetição é possível
+evitar que código seja reescrito e também permite iterações dinâmicas, com base em parâmetros de entrada.
+
 ----
 
 ## Laço for
 
+O laço for consiste em uma forma de repetir a execução de um bloco de código utilizando uma condição.
+
+```
+  for (inicializacao ; condicao_parada ; incremento){
+    /**
+      Bloco de código que será executado.
+    **/
+  }
+
+```
+
+[Material Complementar (Vídeo)](https://youtu.be/tlagnwiiIqE)
+[Material Complementar (Texto)](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-for-Statement)
 ----
 
+## Laço for
+
+É importante lembrar que todos os parâmetros são opcionais, mas a condição de parada normalmente
+deverá ser preenchida, caso contrário o laço será infinito.
+
+```
+
+for(;;) {
+   printf("Loop infinito!");
+}
+
+```
+
+----
+
+## Laço for
+
+É possível chamar mais de uma operação por parâmetro. Para isto, utilize ','.
+
+```
+  int x, y,n;
+  for(int n = 0; n < 10; ++n, printf("%d\n", n));
+
+
+  for (x = 1, y = 10; x <= 10 && y >= 1; x+=2, y--)
+  printf ("%d %d\n", x, y);
+
+```
+
+----
+
+## Laço for
+
+Para executar apenas uma linha não é necessário utilizar as chaves '{}', para executar
+um bloco se faz necessário o uso de chaves.
+
+
+```
+//Apenas uma linha
+for (x = 1, y = 10; x <= 10 && y >= 1; x+=2, y--)
+printf ("%d %d\n", x, y);
+
+//Bloco de código
+for (x = 1; x <= 10; x++)
+  {
+    printf ("x is %d\n", x);
+
+    if ((x % 2) == 0)
+      printf ("%d é par\n", x);
+    else
+      printf ("%d é ímpar\n", x);
+  }
+
+```
+
+
+----
+
+
+
 ## Laço While
+
+Assim como o comando 'for' o 'while' permite executar repetidamente um bloco
+de código (comandos) de acordo com o resultado de uma condição, ou seja, executa enquanto
+a condição for verdadeira.
+
+```
+
+while (condicao){
+  //bloco que será executado
+}
+
+int counter = 0;
+while (counter < 10) {
+  printf ("%d ", counter++);
+}
+
+```
+
+[Material Complementar (Vídeo)](https://youtu.be/3pftIJjsk30)
+[Material Complementar (Texto)](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-while-Statement)
 
 ----
 
 ## Laço do/while
 
+O laço 'do/while' tem a mesma estrutura do 'while'. Mas, no while o condicional é uma pré-condição para executar o código, já no 'do/while' ele é uma pós-condição para que o código continue executando. Neste comando, a primeira iteração sempre vai ser sempre executada.
+
+
+```
+do {
+  //Bloco que será executado
+}while (condicao);
+```
+[Material Complementar (Vídeo)](https://youtu.be/VH6AycSgjN0)
+[Material Complementar (Texto)](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-do-Statement)
 
 ----
 
 
 ## Laço Aninhado
 
+É possível executar um comando de repetição dentro de outro ? Sim, neste caso você terá uma multiplicação de vezes
+que o comando será executado.
+
+```
+
+int i,j;
+
+for (i = 0; i < 10 ; i++){
+
+    for (j = 0; j < 10; j++) {
+
+      printf("%d - %d \n",i,j);
+
+    }
+
+}
+
+```
+
+## Exemplo de Laço Aninhado
+
+```
+  //Imprimindo a diagonal principal de uma matriz
+
+  int main()
+  {
+    int i,j;
+
+    for (i = 0; i < 10 ; i++){
+      printf("|");
+
+      for (j = 0; j < 10; j++) {
+
+        if (i == j){
+          printf("1");
+        }else {
+          printf("0");
+        }
+
+      }
+
+      printf("|\n");
+
+    }
+
+}
+
+
+```
+
 ----
 
 ## Comando break
 
+O comando break, é utilizado para sair de uma estrutura de repetição (for,while,do) ou condicional(switch).
+
+
+
+```
+// Imprime todos os números que estão antes da diagonal principal de uma matriz.
+
+int main()
+{
+  int i,j;
+
+  for (i = 0; i < 10 ; i++){
+    printf("|");
+
+    for (j = 0; j < 10; j++) {
+
+      if (i == j){
+        break; // Quando i == j ele sairá do primeiro for
+      }else {
+        printf("0");
+      }
+
+    }
+
+    printf("|\n");
+
+  }
+
+}
+
+
+```
+
+[Material Complementar (Vídeo)](https://youtu.be/QKzIyC5wBxU)
+[Material Complementar (Texto)](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-break-Statement)
+
+
+----
+
+## Exemplo Comando break
+
+```
+int x;
+for (x = 1; x <= 10; x++)
+  {
+    if (x == 8)
+      break;
+    else
+      printf ("%d ", x);
+  }
+```
+
 ----
 
 ## Comando continue
+
+O comando continue também é capaz de alterar o fluxo de execução de uma estrutura de repetição. Ele é capaz
+de ignorar todo o resto de código que está abaixo da chamada e ir direto para a próxima iteração. Ou seja, não
+sairá do laço.
+
+```
+int main () {
+
+ int x,sum_of_odd_numbers;
+
+ for (x = 0; x < 100; x++)
+  {
+    if (x % 2 == 0)
+      continue;
+
+    sum_of_odd_numbers += x;
+    printf("%d \n",x);
+  }
+
+printf("%d",sum_of_odd_numbers);
+}
+
+```
+
+[Material Complementar (Vídeo)](https://youtu.be/LK8DbKnImQI)
+[Material Complementar (Texto)](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-continue-Statement)
+
+
 
 ----  ----
 
