@@ -938,6 +938,15 @@ printf("%d",sum_of_odd_numbers);
 
 
 
+----
+
+## Exercícios
+
+Faça a lista de exercícios para treinar o conteúdo.
+
+Para acessá-la clique [aqui](https://diego91964.github.io/unipac/disciplinas/tecnicas-de-programacao-2017-2/docs/a2-lista-2017-2.pdf)
+
+
 ----  ----
 
 # Vetor
