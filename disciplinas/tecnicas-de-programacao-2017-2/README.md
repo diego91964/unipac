@@ -696,6 +696,7 @@ O laço for consiste em uma forma de repetir a execução de um bloco de código
 
 [Material Complementar (Vídeo)](https://youtu.be/tlagnwiiIqE)
 [Material Complementar (Texto)](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-for-Statement)
+
 ----
 
 ## Laço for
@@ -818,6 +819,8 @@ for (i = 0; i < 10 ; i++){
 }
 
 ```
+
+----
 
 ## Exemplo de Laço Aninhado
 
