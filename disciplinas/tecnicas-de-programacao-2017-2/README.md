@@ -941,26 +941,108 @@ printf("%d",sum_of_odd_numbers);
 
 
 
-----
+----  ----
 
-## Exercícios
+## Exercícios - A2
 
 Faça a lista de exercícios para treinar o conteúdo.
 
 Para acessá-la clique [aqui](https://diego91964.github.io/unipac/disciplinas/tecnicas-de-programacao-2017-2/docs/a2-lista-2017-2.pdf)
 
+[Exercícios Complementares](http://www.facom.ufu.br/~backes/wordpress/ListaC02.pdf)
+
+[Exercícios Complementares](http://www.facom.ufu.br/~backes/wordpress/ListaC03.pdf)
+
+```
+Faça um programa (algoritmo e fluxograma) que receba um número entre 1 e 10.000 e mostre o valor digitado por extenso.
+
+```
+
 
 ----  ----
 
-# Vetor
+# Modelagem de software
+
+
+Agora que já temos um conhecimento básico de programação, vamos aprender um pouco sobre modelagem.
+
+Os modelos de um software tem como objeto representar as características ou o comportamentos de um software. Eles podem ser usados na identificação das características e funcionalidades, para representar o mesmo de forma mais abstrata e
+didática e também pode ser utilizado para validação e teste do software.
+
+----
+
+
+## Modelagem por fluxograma
+
+O modelo mais utilizado para linguagens procedimentais é o fluxograma. Pois ele
+permite representar o software como um fluxo bem definido com início e fim. Um software pode ser
+dividido em 4 etapas: Declaração de Variáveis, Entrada de Dados, Processamento e Saída; sendo
+possível representar todas elas utilizando o fluxograma.
+
+
+----
+
+
+## Elementos de um fluxograma
+
+![](img/fluxograma.png)
+
+
+----
+
+
+## Exemplo fluxograma - 1
+
+Faça o fluxograma de um algoritmo que calcula a média aritmética entre duas notas de um aluno e mostra sua situação. Aprovado caso seja maior igual a 60 e reprovado caso menor que 60.
+
+
+----
+
+
+## Exemplo fluxograma - 2
+
+Faça um algoritmo e um fluxograma para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até r$ 500 terão aumento de 20%; os demais terão aumento de 10%.
+
+----  ----
+
+# Vetor ou Array
+
+Vetores são estruturas utilizadas para armazenar um conjunto de dados do mesmo tipo.
+
+![](img/array.jpg)
 
 ----
 
 ## Criação de um Vetor
 
+A declaração de um vetor pode ser feita como a de uma variável comum.
+
+```
+
+int vetorDeInteiros [5];
+
+```
+
+----
+
+## Inserindo elementos em um vetor
+
+Os elementos do vetor podem ser acessados utilizando o índice.
+
+
+```
+
+int numero = vetorDeInteiros[0]; //
+
+
+```
+
 ----
 
 ## Acessando elementos de um Vetor
+
+
+Os elementos
 
 ----
 
