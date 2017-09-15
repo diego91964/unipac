@@ -530,13 +530,13 @@ escreva 'outro'.
 
 
 ```
-  if(numero == 1) {
-      printf ('um');
+if(numero == 1) {
+      printf ("um");
   }
   else if(numero == 2) {
-      printf ('dois');
+      printf ("dois");
   }else {
-      printf ('outro');
+      printf ("outro" );
   }
 
 ```
@@ -1011,6 +1011,8 @@ Vetores são estruturas utilizadas para armazenar um conjunto de dados do mesmo 
 
 ![](img/array.jpg)
 
+[Material Complementar - Vídeo](https://youtu.be/CtM7o2rsTic)
+
 ----
 
 ## Criação de um Vetor
@@ -1039,14 +1041,111 @@ int numero = vetorDeInteiros[0]; //
 
 ----
 
-## Acessando elementos de um Vetor
+## Inicializando um Vetor
+
+Inicializar um vetor consiste em dar um valor inicial para determinadas posições do vetor.
+
+```
+#include<stdio.h>
 
 
-Os elementos
+int main () {
+  int i;
+
+  //Iniciliza todos os elementos do vetor
+  int vetor_um[5] = { 0, 1, 2, 3, 4 };
+
+  // Acessando a posição de um vetor
+  printf("%d",vetor_um[1]);
+
+  //Imprimindo utilizando loop for
+  for (i = 0; i < 5; i++){
+    printf("%d",vetor_um[i]);
+  }
+
+  i = 0;
+
+  //Imprimindo utilizando loop while
+  while (i < 5){
+    printf("%d",vetor_um[i]);
+    i++;
+  }
+
+  return 0;
+}
+```
 
 ----
 
-## Imprimindo um Vetor
+
+## Acessando elementos de um Vetor
+
+Os elementos do vetor podem ser acessados através do índice. É importante lembrar que um
+vetor sempre irá retornar um elemento do mesmo tipo que ele.
+
+
+```
+
+#include<stdio.h>
+
+
+int main () {
+  int i;
+
+  //Iniciliza todos os elementos do vetor
+  int vetor_um[5] = { 0, 1, 2, 3, 4 };
+
+  // Acessando a posição de um vetor
+  printf("%d",vetor_um[1]);
+
+  //Imprimindo utilizando loop for
+  for (i = 0; i < 5; i++){
+    printf("%d",vetor_um[i]);
+  }
+
+  i = 0;
+
+  //Imprimindo utilizando loop while
+  while (i < 5){
+    printf("%d",vetor_um[i]);
+    i++;
+  }
+
+  return 0;
+}
+
+
+```
+
+----  ----
+
+# Funções
+
+[Material Complementar](https://youtu.be/OrF2ydZIELk)
+
+----
+
+## Declaração de Funções
+
+----
+
+## Definição de Funções
+
+----
+
+## Chamando Funções
+
+----
+
+## Funções e Parâmetros
+
+----
+
+## Função Main
+
+----
+
+## Função estática
 
 ----  ----
 
