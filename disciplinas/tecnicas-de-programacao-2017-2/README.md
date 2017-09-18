@@ -389,7 +389,17 @@ char s[100];
 ```
 
 
+----  ----
 
+# Compilação e Debugging
+
+----
+
+## Utilizando o GCC
+
+----
+
+## Utilizando o GDB
 
 ----  ----
 
@@ -1117,6 +1127,56 @@ int main () {
 
 ```
 
+----
+
+## Vetores Multidimensionais
+
+É possível declara um vetor de vetores utilizando a linguagem C. A declaração pode
+ser feita da seguinte forma:
+
+```
+int matriz[2][5] { {1, 2, 3, 4, 5}, {6, 7, 8, 9, 10} };
+
+```
+
+Neste caso, para acessar os elementos são necessários dois índices.
+
+```
+  matriz[1][3] = 12;
+
+```
+
+Podemos pensar neste tipo de array como uma matriz;
+
+----
+
+## Exemplo de matriz
+
+```
+#include<stdio.h>
+
+
+int main () {
+  int i , j;
+
+  //Iniciliza todos os elementos do vetor
+  int matriz[2][5] = { {1, 2, 3, 4, 5}, {6, 7, 8, 9, 10} };
+
+  //Imprimindo utilizando loop for
+  for (i = 0; i < 2; i++){
+
+    for ( j = 0 ; j < 5; j ++ ){
+      printf("-%03d",matriz[i][j]);
+    }
+
+    printf("\n");
+  }
+  return 0;
+}
+
+```
+
+
 ----  ----
 
 # Funções
@@ -1346,19 +1406,107 @@ $ ./main parametro1 parametro2
 
 ## Função estática
 
+Uma função estática só poderá ser chamada dentro do arquivo de origem onde a mesma foi criada.
+
+```
+#include<stdio.h>
+
+
+static int somaDois (int x){
+  return x + 2;
+}
+
+int main (){
+
+  int n1,resultado;
+
+  scanf("%d",&n1);
+
+  resultado = somaDois(n1);
+
+  printf("%d",resultado);
+
+  return 0;
+}
+
+```
+Este conceito será melhor aplicado quando trabalharmos com bibliotecas.
+
 
 ----
 
 ## Função Recursiva
 
+Uma função recursiva consiste em uma função que faz uma auto-chamada.
+
+
+```
+
+#include<stdio.h>
+
+
+int
+fatorial (int x)
+{
+  if (x < 1)
+    return 1;
+  else
+    return (x * fatorial (x - 1));
+}
+
+int main (){
+
+  int n1,resultado;
+
+  scanf("%d",&n1);
+
+  resultado = fatorial(n1);
+
+  printf("%d",resultado);
+
+  return 0;
+}
+```
+
+
 ----
 
 ## Funções Aninhadas
 
+Funções aninhadas, são funções declaradas dentro de outras funções. Isto pode ser útil
+para definir o scopo da função interna. As funções internas só podem ser chamadas nas funções
+em que foram criadas.
 
-----
 
-## Biblioteca de Funções
+```
+#include<stdio.h>
+
+int main (){
+
+  int soma (int numero1, int numero2){
+    // Esta função só poderá ser chamada dentro de soma.
+    int multiplica (int n1){
+      return n1 * n1;
+    }
+    return (multiplica(numero1)+numero2);
+  }
+
+
+  int n1,n2,resultado;
+
+  scanf("%d",&n1);
+  scanf("%d",&n2);
+
+  resultado = soma(n1,n2);
+
+  printf("%d",resultado);
+
+  return 0;
+}
+
+
+```
+
 
 ----  ----
 
@@ -1390,3 +1538,8 @@ $ ./main parametro1 parametro2
 ----  ----
 
 # Manipulação de Arquivos
+
+
+----  ----
+
+# Criação de Bibliotecas
