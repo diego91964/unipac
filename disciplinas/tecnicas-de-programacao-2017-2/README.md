@@ -985,7 +985,7 @@ possível representar todas elas utilizando o fluxograma.
 
 ## Elementos de um fluxograma
 
-![](img/fluxograma.png)
+![Fluxograma](https://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2017-2/img/fluxograma.png?raw=true)
 
 
 ----
@@ -1009,7 +1009,7 @@ Faça um algoritmo e um fluxograma para calcular o novo salário de um funcioná
 
 Vetores são estruturas utilizadas para armazenar um conjunto de dados do mesmo tipo.
 
-![](img/array.jpg)
+![](https://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2017-2/img/array.jpg?raw=true)
 
 [Material Complementar - Vídeo](https://youtu.be/CtM7o2rsTic)
 
