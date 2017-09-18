@@ -1121,31 +1121,244 @@ int main () {
 
 # Funções
 
+A linguagem C permite organizar o código através de funções para separar partes
+do seu programa em subprocessos distintos. Para escrever uma função, você deve pelo menos criar
+uma definição de função.
+
 [Material Complementar](https://youtu.be/OrF2ydZIELk)
 
 ----
 
 ## Declaração de Funções
 
+Uma função possui uma série de definições, que chamamos de assinatura.
+
+```
+  tipoDeRetorno nomeDaFuncao (listaDeParametros) {
+
+    //Bloco que será executado.
+
+  }
+
+```
+
 ----
 
 ## Definição de Funções
+
+Uma definição de função deve especificar o que uma função realmente faz, ela consiste
+em informações sobre o nome da função, tipo de retorno, e tipos e nomes de parâmetros,
+juntamente com o corpo da função. O corpo da função é uma série de instruções incluídas
+entre chaves, ou seja ,um bloco.
+
+```
+
+  int soma (int numero1, int numero2){
+
+    return (numero1+numero2);
+  }
+
+```
 
 ----
 
 ## Chamando Funções
 
+Uma função pode ser chamada pelo nome, com a lista de parâmetro entre parên teses:
+
+```
+int soma (int numero1, int numero2){
+
+  return (numero1+numero2);
+}
+
+int main (){
+
+  int n1,n2,resultado;
+
+  scanf("%d",&n1);
+  scanf("%d",&n2);
+
+  resultado = soma(n1,n2);
+
+  printf("%d",resultado);
+
+  return 0;
+}
+
+```
+
 ----
 
 ## Funções e Parâmetros
+
+Os parâmetros de uma função possuem um tipo definido e podem (devem) ser utilizados
+no bloco de código que será executado.
+
+
+```
+
+#include<stdio.h>
+
+int somaInteira (int numero1, int numero2);
+float somaFloat(float numero1, float numero2);
+int imprimeVetor (int vetor[5]);
+int imprimeVetorPonteiro (int* vetor);
+
+int somaInteira (int numero1, int numero2){
+
+  return (numero1+numero2);
+}
+
+float somaFloat(float numero1, float numero2){
+
+  return (numero1+numero2);
+}
+
+int imprimeVetor (int vetor[5]){
+
+  int i;
+
+  for (i = 0 ; i < 5; i++){
+
+    printf("%d",vetor[i]);
+
+  }
+
+}
+
+
+int imprimeVetorPonteiro (int* vetor){
+
+  int i;
+  int j = (int) sizeof(vetor);
+
+  for (i = 0 ; i < 5; i++){
+
+    printf("%d",vetor[i]);
+
+  }
+
+}
+
+void main (){
+
+  printf("%d\n",somaInteira(2,3));
+  printf("%f\n",somaFloat(2.0,3.0));
+
+  int array[] = { 0, 1, 2, 3, 4};
+
+  imprimeVetor(array);
+  imprimeVetorPonteiro(array);
+
+}
+
+
+```
+
+----
+
+## Exemplo de Função
+
+```
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void printSizeOf(int intArray[]);
+void printLength(int intArray[]);
+
+int main(int argc, char* argv[])
+{
+    int array[] = { 0, 1, 2, 3, 4, 5, 6 };
+
+    printf("sizeof of array: %d\n", (int) sizeof(array));
+    printSizeOf(array);
+
+    printf("Length of array: %d\n", (int)( sizeof(array) / sizeof(array[0]) ));
+    printLength(array);
+}
+
+void printSizeOf(int intArray[])
+{
+    printf("sizeof of parameter: %d\n", (int) sizeof(intArray));
+}
+
+void printLength(int intArray[])
+{
+    printf("Length of parameter: %d\n", (int)( sizeof(intArray) / sizeof(intArray[0]) ));
+}
+
+```
 
 ----
 
 ## Função Main
 
+Cada programa requer pelo menos uma função, chamada 'main'. Pois, é nessa função que o programa
+começa a ser executado. Você não precisa escrever uma declaração ou protótipo para o main, mas você precisa defini-lo.
+
+[Material Complementar](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-main-Function)
+
+
+----
+
+## Função Main
+
+O tipo de retorno para main é sempre int. Você não precisa especificar o tipo de retorno para a main, mas você pode. No entanto, você não pode especificar que ele tenha um tipo de retorno diferente de int (padrão GNU).
+
+Em geral, o valor de retorno da main indica o status de saída do programa.
+Um valor de zero ou EXIT_SUCCESS indica sucesso e EXIT_FAILURE indica um erro.
+Caso contrário, o significado do valor retornado é definido pela implementação.
+
+
+----
+
+## Função Main (argc / argv)
+
+Uma função main pode receber parâmetros a partir da chamada do programa.
+
+```
+#include<stdio.h>
+
+
+int
+main (int argc, char *argv[])
+{
+  int counter;
+
+  for (counter = 0; counter < argc; counter++)
+    printf ("%s\n", argv[counter]);
+
+  return 0;
+}
+
+```
+Exemplo de como o código deverá ser chamado:
+
+```
+$ ./main parametro1 parametro2
+
+```
+
+
 ----
 
 ## Função estática
+
+
+----
+
+## Função Recursiva
+
+----
+
+## Funções Aninhadas
+
+
+----
+
+## Biblioteca de Funções
 
 ----  ----
 
