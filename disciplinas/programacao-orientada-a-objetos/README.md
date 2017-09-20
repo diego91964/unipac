@@ -1448,10 +1448,10 @@ class Cerveja extends Bebida { }
 ----
 
 
-# Exercício
+## Exercícios - A2
 
-Faça a
-[lista de exercícios ](https://github.com/diego91964/unipac/blob/master/disciplinas/programacao-orientada-a-objetos/exercicios.md) para treinar seus conhecimentos.
+Faça a 
+[lista](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/docs/lista-a2-poo.pdf)  de exercícios para treinar o conteúdo.
 
 
 ----  ----
