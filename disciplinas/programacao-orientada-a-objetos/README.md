@@ -1780,3 +1780,93 @@ public class MainInterface {
 
 ```
 [Material Complementar](https://www.caelum.com.br/apostila-java-orientacao-objetos/interfaces/#10-1-aumentando-nosso-exemplo)
+
+
+----
+
+# Exceptions
+
+- Como podemos tratar situações de erro em um programa?
+- Como avisar aquele que chamou o método de que ele não conseguiu fazer aquilo que deveria?
+- Como avisar que o parâmetro passado não está correto?
+
+Para isto utilizamos as exceptions.
+
+
+----
+
+## Exceptions
+
+Um método possui uma definição de como deverá ser seu funcionamento, qualquer estado
+não esperado ele lançará uma exceção que poderá ser de dois tipos, as tratadas e não tratadas (Runtime).
+
+----
+
+## Exceptions - Exemplo (NullPointerException)
+
+
+```
+public class Pessoa {
+  String nome;
+}
+
+public class MainNullPointer {
+
+	public static void main(String[] args) {
+
+		Pessoa p = null;
+
+		System.out.println(p.nome);
+	}
+}
+
+```
+
+[Documentação](https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html)
+
+----
+
+## Exceptions - Exemplo (ArrayIndexOutOfBoundsException)
+
+```
+
+public class MainArrayIndexException {
+
+	public static void main(String[] args) {
+		int[] array = new int[10];
+		for (int i = 0; i <= 15; i++) {
+			array[i] = i;
+			System.out.println(i);
+		}
+		System.out.println("fim do metodo2");
+	}
+
+}
+
+```
+
+[Documentação](https://docs.oracle.com/javase/7/docs/api/java/lang/ArrayIndexOutOfBoundsException.html)
+
+----
+
+## Exception Customizada
+
+```
+
+public class MainExceptionCustomizada {
+
+	public static void main(String[] args) {
+		try {
+			olaMundo();
+		} catch (MinhaException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void olaMundo () throws MinhaException{
+		throw new MinhaException();
+	}
+}
+
+
+```
