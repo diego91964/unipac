@@ -961,6 +961,8 @@ Para acessá-la clique [aqui](https://diego91964.github.io/unipac/disciplinas/te
 
 [Exercícios Complementares](http://www.facom.ufu.br/~backes/wordpress/ListaC02.pdf)
 
+[Prova](https://diego91964.github.io/unipac/disciplinas/tecnicas-de-programacao-2017-2/docs/prova-a2.pdf)
+
 [Exercícios Complementares](http://www.facom.ufu.br/~backes/wordpress/ListaC03.pdf)
 
 ```
