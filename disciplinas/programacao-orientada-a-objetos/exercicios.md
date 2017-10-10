@@ -45,7 +45,7 @@
 4 - Faça o seguinte cenário:
 * Crie a classe Pedido, considerando que esta possui:
   * Construtor
-    - Deve ter um construtor, cujos parâmetros são: Código do Pedido, Nome do Cliente e Descrição.
+    - Deve ter um construtor, cujos parâmetros são: Código do Pedido, Cliente e Descrição.
   * Atributos
     - Código de Pedido
     - Cliente
