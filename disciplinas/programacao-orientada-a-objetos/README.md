@@ -1798,12 +1798,15 @@ Para isto utilizamos as exceptions.
 ## Exceptions
 
 Um método possui uma definição de como deverá ser seu funcionamento, qualquer estado
-não esperado ele lançará uma exceção que poderá ser de dois tipos, as tratadas e não tratadas (Runtime).
+não esperado ele lançará uma exceção que poderá ser de dois tipos, as checked e unchecked.
+
+As exceções do tipo checked são de tratamento obrigatório, já as do tipo unchecked é de tratamento opcional.
 
 ----
 
 ## Exceptions - Exemplo (NullPointerException)
 
+Acesso a um recurso não existente (Unchecked).
 
 ```
 public class Pessoa {
@@ -1828,6 +1831,8 @@ public class MainNullPointer {
 
 ## Exceptions - Exemplo (ArrayIndexOutOfBoundsException)
 
+Acesso a uma posição não existente (Unchecked).
+
 ```
 
 public class MainArrayIndexException {
@@ -1851,6 +1856,9 @@ public class MainArrayIndexException {
 
 ## Exception Customizada
 
+
+Criando uma exceção para uma situação específica (Checked).
+
 ```
 
 public class MainExceptionCustomizada {
@@ -1868,5 +1876,64 @@ public class MainExceptionCustomizada {
 	}
 }
 
+
+```
+
+----
+
+## Tratamento de Exceções
+
+Já aprendemos a criar as exceções, e como tratá-las?
+
+O tratamento é feito utilizando os blocos try/catch
+
+----
+
+## Tratamento de Exceções
+
+```
+public class MainExceptionCustomizada {
+
+	public static void main(String[] args) {
+		try {
+			olaMundo();
+		} catch (MinhaException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void olaMundo () throws MinhaException{
+		throw new MinhaException();
+	}
+}
+
+
+```
+
+----
+
+## Bloco Finally
+
+O bloco finally é um bloco que sempre será executado. O mesmo poderá ser utilizado
+para ações como fechar stream de dados, conexões, entre outros.
+
+```
+
+public class MainExceptionCustomizada {
+
+	public static void main(String[] args) {
+		try {
+			olaMundo();
+		} catch (MinhaException e) {
+			e.printStackTrace();
+		}finally {
+			System.out.println("Sempre irá ser executado");
+		}
+	}
+
+	public static void olaMundo () throws MinhaException{
+		throw new MinhaException();
+	}
+}
 
 ```
