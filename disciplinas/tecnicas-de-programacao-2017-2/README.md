@@ -1062,24 +1062,43 @@ Inicializar um vetor consiste em dar um valor inicial para determinadas posiçõ
 
 
 int main () {
-  int i;
 
   //Iniciliza todos os elementos do vetor
   int vetor_um[5] = { 0, 1, 2, 3, 4 };
 
-  // Acessando a posição de um vetor
-  printf("%d",vetor_um[1]);
+  //Inicializa as três primeiras posições do vetor. As outras posições terão valor zero
+  int vetor_dois[5] = { 0, 1, 2 };
 
-  //Imprimindo utilizando loop for
+  //Inicializa as posições [2] e [4] do vetor, com os valores 5 e 9 respectivamente.
+  int vetor_tres[5] = { [2] 5, [4] 9 };
+
+  //Inicializa as posições [2] e [4] do vetor, com os valores 5 e 9 respectivamente.
+  int vetor_quatro[5] = { [2] = 5, [4] = 9 };
+
+  //Inicializa as posições de 0 a 9 com o valor 1 e de 10 a 98 com valor e o elemento 99 com o valor 3
+  int vetor_cinco[100] = { [0 ... 9] = 1, [10 ... 98] = 2, 3 };
+
+  //Caso o tamanho não seja especificado, o tamanho do vetor será igual a quantidade de elementos que foi inserida nele
+  // de forma estática, neste caso seria vetor_seis[5];
+  int vetor_seis[] = { 0, 1, 2, 3, 4 };
+
+  //Caso o tamanho não seja especificado, o tamanho do vetor será igual a maior posição que foi inicializada
+  // de forma estática, neste caso vetor_sete[100];
+  int vetor_sete[] = { 0, 1, 2, [99] = 99 };
+
+  int vetor_oito [5];
+  int i;
+
+  //Inicializando utilizando loop for
   for (i = 0; i < 5; i++){
-    printf("%d",vetor_um[i]);
+    vetor_oito[i] = i;
   }
 
   i = 0;
 
-  //Imprimindo utilizando loop while
+  //Inicializando utilizando loop while
   while (i < 5){
-    printf("%d",vetor_um[i]);
+    vetor_oito[i] = i;
     i++;
   }
 
@@ -1515,34 +1534,229 @@ int main (){
 
 # Struct
 
+Uma estrutura é um tipo de dados definido pelo programador composto de variáveis de outros tipos de dados (possivelmente incluindo outros tipos de estrutura).
+
 ----
 
 ## Introdução a Struct
 
+Uma estrutura é definida usando a palavra-chave struct seguida pelas declarações dos elementos da estrutura entre chaves. Cada elemento de um struct é declarado assim como um tipo. É necessário dar um nome para o struct ou utilizar uma definição de tipo 'typedef'.
+
+[Typedef](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-typedef-Statement)
+
+
+
+```
+
+struct point
+  {
+    int x, y;
+  };
+
+```
 ----
 
 
 ## Trabalhando com estruturas
 
+```
+
+struct ponto {
+  int x , y;
+};
+
+int main (){
+
+  int n1,n2;
+
+  scanf("%d",&n1);
+  scanf("%d",&n2);
+
+  struct ponto meuPonto;
+
+  meuPonto.x = n1;
+  meuPonto.y = n2;
+
+  printf("%d - %d",meuPonto.x,meuPonto.y);
+
+  return 0;
+}
+
+```
+
 ----
 
-## Array de estruturas
+## Array e estruturas
 
-----
+```
 
-## Estruturas aninhadas
+#include<stdio.h>
 
-----
+
+struct aluno {
+  int notaAluno;
+  char nomeAluno[20];
+};
+
+int main (){
+
+  struct aluno aluno1;
+
+  scanf("%d",&aluno1.notaAluno);
+  scanf("%s",aluno1.nomeAluno);
+
+
+  printf("%d - %s",aluno1.notaAluno,aluno1.nomeAluno);
+
+  return 0;
+}
+
+
+```
+
 
 ----  ----
 
 # Ponteiro e Alocação de Memória
 
-----  ----
+Os ponteiros mantêm os endereços de memória de constantes ou variáveis armazenadas. Para qualquer tipo de dados, incluindo tipos primitivos e tipos personalizados, você pode criar um ponteiro que contenha o endereço de memória de uma instância desse tipo.
 
-# Manipulação de Arquivos
+![](ttps://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2017-2/img/cptr.gif?raw=true)
 
 
-----  ----
+----
 
-# Criação de Bibliotecas
+## Declarando Ponteiros
+
+```
+  tipo * nome;
+
+  int *teste;
+
+  int *foo, *bar;  /* Dois ponteiros. */
+  int *baz, quux;   /* Ponteiro e uma variável inteiro. */
+
+```
+
+----
+
+## Inicializando Ponteiros
+
+```
+#include<stdio.h>
+
+int main (){
+
+  int *n1;
+  int n2;
+
+  scanf("%d",&n2);
+
+  n1 = &n2;
+
+
+  printf("\n Endereço N1: %X \n Valor N1: %d \n", n1, *n1);
+  printf("\n Endereço N2: %X \n Valor N2: %d \n", &n2, n2);
+
+  return 0;
+}
+
+```
+
+----
+
+## Inicializando Ponteiros e Estruturas
+
+```
+#include<stdio.h>
+
+int main (){
+
+  struct peixe
+    {
+      float tamanho, peso;
+    };
+  struct peixe salmao = {4.3, 5.8};
+  struct peixe *salmao_ptr = &salmao;
+
+  printf("\n Endereço Salmao: %X \n Valor Peso Salmao: %.2f \n", &salmao, salmao.peso);
+  printf("\n Endereço Salmao_PTR: %X \n Valor Peso Salmao_PTR: %.2f \n", salmao_ptr, salmao_ptr->peso);
+
+  return 0;
+}
+
+```
+
+----  
+
+# Inicializando Ponteiros e Arrays
+
+```
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main (){
+
+  int *n1, i;
+
+  n1 = malloc (sizeof(int)*4);
+
+  for (i = 0; i < 4; i++){
+    n1[i] = i;
+  }
+
+  for (i = 0; i < 4; i++){
+    printf("%d\n", n1[i] );
+  }
+
+  free(n1);
+
+  return 0;
+}
+
+
+```
+
+----  
+
+# Inicializando Ponteiros e String
+
+
+```
+
+#include<stdio.h>
+
+struct aluno {
+  int notaAluno;
+  char *nomeAluno;
+};
+
+int main (){
+
+  char aux[200];
+  struct aluno aluno1;
+
+  scanf("%d",&aluno1.notaAluno);
+  scanf("%s",aux);
+
+  aluno1.nomeAluno = aux;
+
+  printf("%d - %s",aluno1.notaAluno,aluno1.nomeAluno);
+
+  return 0;
+}
+
+```
+
+----
+
+## Material Complementar
+
+[Sizeof](http://youtu.be/p2ihD9uDZs4)
+
+[Malloc](http://youtu.be/iU9CL5d-P5U)
+
+[Calloc](http://youtu.be/34uZMXVQd08)
+
+[Realloc](http://youtu.be/vEMTGkANXM4)
