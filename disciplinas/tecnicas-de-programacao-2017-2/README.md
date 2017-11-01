@@ -1554,6 +1554,7 @@ struct point
   };
 
 ```
+
 ----
 
 
@@ -1601,6 +1602,8 @@ struct aluno {
 int main (){
 
   struct aluno aluno1;
+
+  struct aluno alunos[5];
 
   scanf("%d",&aluno1.notaAluno);
   scanf("%s",aluno1.nomeAluno);
@@ -1687,7 +1690,8 @@ int main (){
 
 ```
 
-----  
+----
+
 
 # Inicializando Ponteiros e Arrays
 
@@ -1717,6 +1721,7 @@ int main (){
 
 
 ```
+
 
 ----  
 
