@@ -1962,3 +1962,29 @@ sobre os seguintes artigos:
 ----
 
 ## Listas de Exercícios
+
+
+[Lista - 1](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/01-Lista.pdf)
+
+[Lista - 2](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/02-Lista.pdf)
+
+
+----
+
+## Enade
+
+[Enade 2014 - Prova](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/enade/2014/prova.pdf)
+[Enade 2014 - Gabarito](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/enade/2014/gabarito.pdf)
+[Enade 2014 - Respostas](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/enade/2014/respostas.pdf)
+
+[Enade 2017 - Prova](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/enade/2017/prova.pdf)
+[Enade 2017 - Gabarito](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/enade/2017/gabarito.pdf)
+
+
+----
+
+## Poscomp
+
+[Poscomp 2016 - Prova](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/poscomp/prova.pdf)
+
+[Poscomp 2016 - Gabarito](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/poscomp/gabarito.pdf)
