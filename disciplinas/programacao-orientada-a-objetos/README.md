@@ -611,8 +611,8 @@ public class MainSwitchCaseJava {
 
 São um tipo de condição que utiliza um operador ternário para realizar ações com base no resultado de uma operação.
 Normalmente é utilizado para realizar atribuições mediante condição.
-
 ```
+
 public static void main(String[] args) {
 
 		Scanner s = new Scanner(System.in);
@@ -1938,3 +1938,27 @@ public class MainExceptionCustomizada {
 }
 
 ```
+
+----  ----
+
+## Atividades
+
+As atividades desenvolvidas no semestre poderão ser encontradas neste capítulo.
+
+
+----
+
+## Artigos
+
+A sala deverá ser dividida em grupo de quatro pessoas para que sejam realizadas discussões
+sobre os seguintes artigos:
+
+[Apresentação dia 20/02/2018](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/papers/nosilverbullet.pdf)
+
+[Apresentação dia 27/03/2018](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/papers/theroleofprogramingparadigm.pdf)
+
+[Apresentação dia 15/05/2018](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/papers/whatispoo.pdf)
+
+----
+
+## Listas de Exercícios
