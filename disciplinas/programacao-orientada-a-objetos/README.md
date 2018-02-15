@@ -205,6 +205,334 @@ public class Subtracao extends OperacaoMatematica {
 
 ----
 
+## Sobreposição - Equals
+
+Qual seria o resultado do seguinte código?
+
+```
+  public class Pessoa {
+
+  	private String nome;
+  	private String cpf;
+  	public String getNome() {
+  		return nome;
+  	}
+  	public void setNome(String nome) {
+  		this.nome = nome;
+  	}
+  	public String getCpf() {
+  		return cpf;
+  	}
+  	public void setCpf(String cpf) {
+  		this.cpf = cpf;
+  	}
+  }
+
+  public class Main {
+
+	public static void main(String[] args) {
+
+		  Pessoa p1 = new Pessoa();
+		  p1.setNome("joao");
+		  p1.setCpf("12312312312");
+		  Pessoa p2 = new Pessoa();
+		  p2.setNome("joao");
+		  p2.setCpf("12312312312");
+
+		  System.out.println(p1.equals(p2));
+	}
+}
+
+```
+
+** Deveria ser true.
+
+----
+
+## Sobreposição - Equals
+
+
+Quando executamos 'p1.equals(p2)' como é feita a comparação?
+
+
+  ```
+  public boolean equals(Object object) {
+    return this == object;
+  }
+  ```
+<!-- .element: class="fragment" -->
+
+Para garantir a comparação correta entre dois objetos de uma mesma classe, podemos implementar o método equals.
+
+<!-- .element: class="fragment" -->
+
+----
+
+## Sobreposição - Equals
+
+Como exemplo, podemos pensar que duas pessoas são iguais quando possuem o mesmo CPF.
+
+```
+public class Pessoa {
+
+	private String nome;
+	private String cpf;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pessoa other = (Pessoa) obj;
+		if (cpf == null) {
+			if (other.cpf != null)
+				return false;
+		} else if (!cpf.equals(other.cpf))
+			return false;
+		return true;
+	}
+
+}
+```
+<!-- .element: class="fragment" -->
+
+----
+
+## Sobreposição - Equals
+
+A comparação do método equais deve seguir algumas propriedades:
+
+* Reflexiva: Para qualquer referência não nula para x, x.equals(x) deve retornar true.
+* Simétrica: Para qualquer referência não nula para x e y, x.equals(y) deve retornar true se, somente se y.equals(x) retonar true.
+* Transitiva: Se x.equals(y) == true e y.equals(z) == true, então x.equals(z) deve ser true.
+* Consistente: Chamadas sucessivas de x.equals(y) devem retornar o mesmo resultado, desde que consistente.
+* Para uma referência não nula para x, qualquer chamada x.equals(null) deve retornar false.
+
+
+----
+
+## Sobreposição - Hashcode
+
+Como podemos melhorar a busca de um objeto ?
+
+Que tal criarmos uma regra para esta organização?
+<!-- .element: class="fragment" -->
+
+![](img/hashcode.png)
+<!-- .element: class="fragment" -->
+
+----
+
+## Sobreposição - Hashcode
+
+A função hashcode permite organizar os objetos com base em uma função que os tornam únicos. Assim, a busca dos objetos é otimizada. Mas, é importante saber o comportamento desta função para as diferentes estruturas presentes na linguagem Java. [Material Complementar](https://youtu.be/AbRfF3yHB_Y)
+
+```
+public class Pessoa {
+
+	private String nome;
+	private String cpf;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pessoa other = (Pessoa) obj;
+		if (cpf == null) {
+			if (other.cpf != null)
+				return false;
+		} else if (!cpf.equals(other.cpf))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", cpf=" + cpf + "]";
+	}
+
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		  HashSet<Pessoa> hash = new HashSet<>();
+
+		  List<Pessoa> lista = new ArrayList<>();
+
+		  Pessoa p1 = new Pessoa();
+		  p1.setNome("joao");
+		  p1.setCpf("12312312312");
+		  Pessoa p2 = new Pessoa();
+		  p2.setNome("maria");
+		  p2.setCpf("12312312312");
+
+		  hash.add(p1);
+		  hash.add(p2);
+
+		  lista.add(p1);
+		  lista.add(p2);
+
+		  System.out.println("Resultado Hash");
+		  hash.stream().forEach(System.out::println);
+
+		  System.out.println("------------------------------\n");
+
+		  System.out.println("Resultado Lista");
+		  lista.stream().forEach(System.out::println);
+
+	}
+
+```
+
+
+----
+
+
+## Sobreposição - Finalize
+
+Este método é chamado quando um objeto é destruído. Sobrepor este método pode ser uma ação perigosa, pois,
+está diretamente ligado a limpeza de memória da JVM. Além disso, o mesmo tende a não se tornar deprecated.
+
+[Material Complementar](http://www.baeldung.com/java-finalize)
+
+
+----
+
+## Sobreposição - Clone
+
+Este método é responsável por retornar uma cópia do objeto x. Esta cópia deve ter os atributos com os mesmos valores de x, porém,
+não necessáriamente o mesmo endereço de memória. Por exemplo:
+
+```
+public class Pessoa {
+
+	private String nome;
+	private String cpf;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pessoa other = (Pessoa) obj;
+		if (cpf == null) {
+			if (other.cpf != null)
+				return false;
+		} else if (!cpf.equals(other.cpf))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", cpf=" + cpf + "]";
+	}
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("Destruindo o objeto:" + this.cpf);
+		super.finalize();
+	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		Pessoa aux = new Pessoa();
+		aux.setCpf(this.cpf);
+		aux.setNome(this.nome);
+		return aux;
+	}
+
+
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+
+
+		try {
+			Pessoa p1 = new Pessoa();
+			p1.setNome("joao");
+			p1.setCpf("12312312312");
+
+			System.out.println("Original:" + p1);
+			System.out.println("Clone:" + p1.clone());
+			System.out.println("== " + (p1 == p1.clone()));
+			System.out.println("equals " + (p1.equals(p1.clone())));
+
+
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+
+	}
+}
+
+
+```
+
+----
+
 ## Encapsulamento
 
 Significa juntar o programa em partes, o mais isoladas possível.
@@ -1445,14 +1773,6 @@ class Cerveja extends Bebida { }
 
 ```
 
-----
-
-
-## Exercícios - A2
-
-Faça a
-[lista](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/lista-a2-poo.pdf)  de exercícios para treinar o conteúdo.
-
 
 ----  ----
 
@@ -1964,10 +2284,21 @@ sobre os seguintes artigos:
 ## Listas de Exercícios
 
 
-[Lista - 1](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/01-Lista.pdf)
+[Lista - 1 - Introdução a POO](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/01-lista.pdf)
 
-[Lista - 2](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/02-Lista.pdf)
+[Lista - 2 - Introdução a Java e Revisão](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/02-lista.pdf)
 
+[Lista - 3 - Classes e Construtores](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/03-lista.pdf)
+
+[Lista - 4 - Métodos](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/04-lista.pdf)
+
+[Lista - 5 - Modificadores de Acesso](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/05-lista.pdf)
+
+[Lista - 6 - Polimorfismo](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/06-lista.pdf)
+
+[Lista - 7 - Sobrecarga e Sobreposição](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/07-lista.pdf)
+
+[Lista - 8 - Listas, Exceptions, File e Date](https://diego91964.github.io/unipac/disciplinas/programacao-orientada-a-objetos/doc/listas/08-lista.pdf)
 
 ----
 
