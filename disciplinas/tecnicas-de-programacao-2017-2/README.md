@@ -141,6 +141,51 @@ Algoritmo para fazer compras:
 
 ----  ----
 
+# Modelagem de software
+
+
+Agora que já temos um conhecimento básico de programação, vamos aprender um pouco sobre modelagem.
+
+Os modelos de um software tem como objeto representar as características ou o comportamentos de um software. Eles podem ser usados na identificação das características e funcionalidades, para representar o mesmo de forma mais abstrata e
+didática e também pode ser utilizado para validação e teste do software.
+
+----
+
+
+## Modelagem por fluxograma
+
+O modelo mais utilizado para linguagens procedimentais é o fluxograma. Pois ele
+permite representar o software como um fluxo bem definido com início e fim. Um software pode ser
+dividido em 4 etapas: Declaração de Variáveis, Entrada de Dados, Processamento e Saída; sendo
+possível representar todas elas utilizando o fluxograma.
+
+
+----
+
+
+## Elementos de um fluxograma
+
+![Fluxograma](https://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2017-2/img/fluxograma.png?raw=true)
+
+
+----
+
+
+## Exemplo fluxograma - 1
+
+Faça o fluxograma de um algoritmo que calcula a média aritmética entre duas notas de um aluno e mostra sua situação. Aprovado caso seja maior igual a 60 e reprovado caso menor que 60.
+
+
+----
+
+
+## Exemplo fluxograma - 2
+
+Faça um algoritmo e um fluxograma para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até r$ 500 terão aumento de 20%; os demais terão aumento de 10%.
+
+
+----  ----
+
 # Primeiro programa
 
 Agora vamos começar criando nosso primeiro programa em C.
@@ -392,13 +437,141 @@ char s[100];
 
 # Compilação e Debugging
 
+Muitas vezes utilizamos IDE (Integrated Development Environment) para o desenvolvimento de programas,
+tais ambientes conseguem abstrair o processo de compilação, que consiste em transformar o código fonte (humanamente legível) em um código que o computador é capaz de ler. Além disso, muitas delas permitem abstrair o processo de Debugging, que consiste em
+parar a execução do programa em determinadas etapas, acessando valores correntes das variáveis e o estado do programa. O processo de Debugging é muito importante para descobrir erros no software.
+
+
 ----
 
 ## Utilizando o GCC
 
+Um dos compiladores utilizados no Linux é o GCC ([GNU Compiler Collection](https://gcc.gnu.org/)). Este compilador é chamado por linha de comando:
+
+```
+  gcc arquivo.c
+
+```
+
+----
+
+## Utilizando o GCC
+
+Mas, além do comando simples, existem diversos parâmetros que podem ser utilizados para acessar funcionalidades extras
+do compilador. Todos os parâmetros estão disponíveis no [manual do compilador](https://gcc.gnu.org/onlinedocs/gcc-7.3.0/gcc.pdf).
+
+----
+
+## Utilizando o GCC
+
+Ao chamar o compilador passando como argumento apenas o arquivo fonte, temos como resultado um
+arquivo chamado 'a.out' que consiste no arquivo executável padrão.
+
+```
+$ gcc arquivo.c
+
+```
+
+Para executar o arquivo, utilize o comando:
+
+```
+$ ./a.out
+
+```
+
+----
+
+## Utilizando o GCC
+
+Outra forma de compilar é passando como argumento o nome do arquivo executável:
+
+```
+gcc filename -o outputfile
+
+```
+
+Neste caso, para executar o arquivo basta utilizar o comando:
+
+```
+./outputfile
+
+```
+
+----
+
+## Utilizando o GCC
+
+Quando utilizamos a biblioteca Math.h, para operações matemáticas, é necessário
+passar outro argumento:
+
+```
+gcc filename -o outputfile -lm
+
+```
+
 ----
 
 ## Utilizando o GDB
+
+O GDB consiste no sistema de Debugging do GNU Compiler. Para que possamos utilizá-lo, é necessário seguir os seguintes passos:
+
+* Criar o arquivo '.c'
+* Compilar o mesmo utilizando o argumento '-g'
+* Executar os comandos dentro do GDB
+
+----
+
+## Utilizando o GDB
+
+
+```
+# include <stdio.h>
+
+int main()
+{
+	int i, num, j;
+	printf ("Entre com o núermo: ");
+	scanf ("%d", &num );
+
+	for (i=1; i<num; i++)
+		j=j*i;    
+
+	printf("O fatorial de %d é %d\n",num,j);
+}
+
+```
+
+```
+#Compilar em modo de Debug
+$gcc -g fatoria.c
+
+#Inicializar o GDB para o executável
+$gdb a.out
+
+#Adicionar um break point na linha 10
+(gdb) break 10
+
+#Executar o programa
+(gdb)run
+
+# Imprimir o valor da variável i
+(gdb)print i
+```
+
+
+----
+
+## Utilizando o GDB
+
+Outros comandos do gdb são:
+
+* c ou continue: Para continuar a execução do software;
+* n ou next: Para executar a próxima instrução;
+* s ou step: Se comporta como next, mas não considera funções como uma etapa;
+* list: Lista o código fonte até o próximo break point ou até o final;
+* print [nome da variável]: Imprime o valor atual da variável;
+* bt: Mostra a pilha de execução.
+
 
 ----  ----
 
@@ -972,49 +1145,6 @@ Faça um programa (algoritmo e fluxograma) que receba um número entre 1 e 10.00
 
 ----  ----
 
-# Modelagem de software
-
-
-Agora que já temos um conhecimento básico de programação, vamos aprender um pouco sobre modelagem.
-
-Os modelos de um software tem como objeto representar as características ou o comportamentos de um software. Eles podem ser usados na identificação das características e funcionalidades, para representar o mesmo de forma mais abstrata e
-didática e também pode ser utilizado para validação e teste do software.
-
-----
-
-
-## Modelagem por fluxograma
-
-O modelo mais utilizado para linguagens procedimentais é o fluxograma. Pois ele
-permite representar o software como um fluxo bem definido com início e fim. Um software pode ser
-dividido em 4 etapas: Declaração de Variáveis, Entrada de Dados, Processamento e Saída; sendo
-possível representar todas elas utilizando o fluxograma.
-
-
-----
-
-
-## Elementos de um fluxograma
-
-![Fluxograma](https://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2017-2/img/fluxograma.png?raw=true)
-
-
-----
-
-
-## Exemplo fluxograma - 1
-
-Faça o fluxograma de um algoritmo que calcula a média aritmética entre duas notas de um aluno e mostra sua situação. Aprovado caso seja maior igual a 60 e reprovado caso menor que 60.
-
-
-----
-
-
-## Exemplo fluxograma - 2
-
-Faça um algoritmo e um fluxograma para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até r$ 500 terão aumento de 20%; os demais terão aumento de 10%.
-
-----  ----
 
 # Vetor ou Array
 
