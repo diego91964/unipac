@@ -432,6 +432,39 @@ char s[100];
 }
 ```
 
+----
+
+## Lendo cadeia de caracteres
+
+```
+// Este código lê cadeia de caracteres com tamanho até 100;
+#include <stdio.h>
+
+int main()
+{
+	int n, tmp;
+  int i;
+
+  char str[100];
+
+  for (i = 0; i < 5; i++){
+   /* Lê todos os dados até a quebra de linha */
+   scanf("%[^\n]", str);
+
+   printf("Valor lido: %s\n", str);
+
+   /* Limpa o Buffer de leitura */
+   scanf("%*[^\n]");
+   /* Limpa o Buffer de leitura */
+   scanf("%*c");   
+
+  }
+
+	return 0;
+}
+
+```
+
 
 ----  ----
 
