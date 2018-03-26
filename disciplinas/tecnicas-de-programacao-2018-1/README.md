@@ -165,7 +165,7 @@ possível representar todas elas utilizando o fluxograma.
 
 ## Elementos de um fluxograma
 
-![Fluxograma](https://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2017-2/img/fluxograma.png?raw=true)
+![Fluxograma](https://github.com/diego91964/unipac/blob/master/disciplinas/tecnicas-de-programacao-2018-1/img/fluxograma.png?raw=true)
 
 
 ----
