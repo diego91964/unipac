@@ -1786,7 +1786,7 @@ Neste capítulo vamos definir algumas propriedades e relacionamentos que podem o
 
 ## Associação
 
-Uma associação consiste em um relacionametno entre objetos destas classes, ou seja, elas estão conectadas por um aspecto.
+Uma associação consiste em um relacionamento entre objetos destas classes, ou seja, elas estão conectadas por um aspecto.
 
 ```
 
@@ -1824,9 +1824,16 @@ public class MainAssociacao {
 
 ## Agregação
 
+É uma associação unidirecional entre objetos. Esta associação pode ser representada
+pelo termo 'tem um' ou 'tem vários'. Mas, os dois objetos envolvidos podem 'sobreviver'
+individualmente, ou seja, seus ciclos de vida não são relacionados.
 
-É uma forma de associação utilizada para mostrar que um tipo de objeto é composto, pelo menos em parte, de outro em uma relação todo/parte. Indicando que o objeto parte "é um atributo" do objeto todo, onde o ciclo de vida do objeto parte é limitado ao ciclo de vida do objeto todo.
+[Material Complementar](https://youtu.be/ERdvijGtrq0)
 
+
+----
+
+## Agregação
 
 ```
 
@@ -1874,8 +1881,8 @@ public class MainAgregacao {
 
 ## Composição
 
-Também é uma forma de associação, mas, temos dois tipos de objetos, um representa o 'todo' e outro uma 'parte', ou seja, um
-objeto é composto de outros. Mas, caso o objeto 'todo' não exista, não faz sentido os objetos 'parte' existirem.
+Composição é uma forma restrita de Agregação na qual duas entidades são altamente dependentes. Na composição, ambas as entidades são dependentes umas das outras. Quando há uma composição entre duas entidades, o objeto composto não pode existir sem a outra entidade.
+
 
 ```
 
@@ -1919,6 +1926,18 @@ public class MainComposicao {
 ```
 
 ----
+
+
+## Agregação vs Composição
+
+Dependência:
+* Agregação implica um relacionamento em que o filho pode existir independentemente do pai. Por exemplo, Banco e Empregado.
+* Composição implica uma relação onde o objeto filho não pode existir independente do pai. Exemplo: humano e coração.
+* Tipo de Relacionamento: A relação de agregação é 'tem-um' e a composição é 'parte-de'.
+* Tipo de associação: A composição é uma associação forte, enquanto a agregação é uma associação fraca.
+
+----
+
 
 ## Generalização
 
