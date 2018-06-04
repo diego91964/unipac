@@ -2280,6 +2280,537 @@ public class MainExceptionCustomizada {
 
 ----  ----
 
+# Arquivos
+
+Quando estamos criando um software, muitas vezes temos que lidar com manipulação de arquivos, seja para ler dados de configuração, armazenar dados ou manipular arquivos no sistema de arquivos. A linguagem Java provê APIs de manipulação de arquivos, são elas Java.io, Java.nio e “Java.nio.2”.
+
+
+----
+
+## Java. (io x nio x nio.2)
+
+É importante entender que uma API não veio para substituir a outra, mas sim para complementar.
+
+
+----
+
+## Java.io
+
+Fornece entrada e saída do sistema através de fluxos de dados, serialização e sistema de arquivos. É a API mais básica para leitura e escrita de arquivos, suas operações são bloqueantes e são orientadas a streams,
+
+
+----
+
+
+## Java.nio
+
+Fornece uma API orientada a buffer, permitindo operações de entreada e saída não bloqueantes, aumentando o desempenho da aplicação.
+
+
+----
+
+## Java.io - File
+
+Um [File](https://docs.oracle.com/javase/7/docs/api/java/io/File.html) consiste em representação abstrata de caminho de arquivos e diretórios, ou seja, uma visão abstrata, independente do sistema de arquivo e sistema operacional.
+
+
+----
+
+
+## Java.io - File - Construtor
+
+```
+File(File parent, String child)
+//Cria uma instância a partir de um 'pai' abstrado
+File(String pathname)
+//Cria uma instância de um File, convertêndo o caminho abstrado no caminho do sistema de arquivos
+File(URI uri)
+//Cria uma instância de um File a partir de uma URI
+
+```
+
+
+----
+
+
+## Java.io - File - Funções
+
+```
+
+import java.io.File;
+
+public class FuncoesFile {
+
+	public static final String BASE_PATH = "/tmp";
+	public static final String ARQUIVO_TESTE = "file-teste.txt";
+
+	public static void main(String[] args) {
+
+
+	      File f = new File(BASE_PATH + File.separator + "file.tmp");
+
+	      System.out.println("Path absoluto: " + f.getAbsolutePath());
+	      System.out.println("Arquivo existe: " + f.exists());
+	      System.out.println("Pode ser lido: " + f.canRead());
+	      System.out.println("Pode ser escrito: " + f.canWrite());
+	      System.out.println("Pode ser executado: " + f.canExecute());
+	      System.out.println("É arquivo: " + f.isFile());
+	      System.out.println("É diretorio: " + f.isDirectory());
+
+
+
+	      File dir = new File(BASE_PATH + File.separator + "diretorio");
+
+	      if (dir.isDirectory()) {
+
+	    	  for (File dirFile : dir.listFiles()) {
+	    		  System.out.println(dirFile.getAbsolutePath());
+	    	  }
+	      }
+
+
+	}
+}
+
+
+```
+
+----
+
+## Arquivo - Escrita
+
+
+A manipulação de arquivos pode ser feita basicamente com as operações de leitura, escrita, criação e deleção. Mas,
+existem várias formas de executar estas ações utilizando a linguagem Java.
+
+
+----
+
+## Arquivo - File Writer
+
+
+```
+
+package br.com.unipac.file;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.thedeanda.lorem.Lorem;
+import com.thedeanda.lorem.LoremIpsum;
+
+public class EscritaArquivo {
+
+	public static final String BASE_PATH = "/tmp/diretorio";
+	public static final String ARQUIVO_TESTE = "file-teste.txt";
+
+	public static void main(String[] args) {
+		escritaComFileWriter();
+	}
+
+
+	public static void escritaComFileWriter() {
+
+		Lorem lorem = LoremIpsum.getInstance();
+
+		File f = new File(BASE_PATH + File.separator + lorem.getWords(1));
+
+		try {
+			if (f.createNewFile()) {
+				FileWriter writer = new FileWriter(f);
+				writer.write(lorem.getParagraphs(1, 50));
+			    writer.flush();
+			    writer.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+
+```
+
+----
+
+## Arquivo - Buffered Writer
+
+```
+
+package br.com.unipac.file;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.thedeanda.lorem.Lorem;
+import com.thedeanda.lorem.LoremIpsum;
+
+public class EscritaArquivo {
+
+	public static final String BASE_PATH = "/tmp/diretorio";
+	public static final String ARQUIVO_TESTE = "file-teste.txt";
+
+	public static void main(String[] args) {
+		escritaComBufferedWriter();
+	}
+
+	public static void escritaComBufferedWriter() {
+
+		Lorem lorem = LoremIpsum.getInstance();
+
+		File f = new File(BASE_PATH + File.separator + lorem.getWords(1));
+
+		try {
+			if (f.createNewFile()) {
+
+				BufferedWriter buffer = new BufferedWriter(new FileWriter(f));
+				buffer.write(lorem.getParagraphs(1, 50));
+			    buffer.flush();
+			    buffer.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+
+```
+
+----
+
+## Arquivo - Buffered Writer
+
+```
+
+package br.com.unipac.file;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.thedeanda.lorem.Lorem;
+import com.thedeanda.lorem.LoremIpsum;
+
+public class EscritaArquivo {
+
+	public static final String BASE_PATH = "/tmp/diretorio";
+	public static final String ARQUIVO_TESTE = "file-teste.txt";
+
+	public static void main(String[] args) {
+		escritaComFileOutPutStream();
+	}
+
+	public static void escritaComFileOutPutStream() {
+
+		Lorem lorem = LoremIpsum.getInstance();
+
+		File f = new File(BASE_PATH + File.separator + lorem.getWords(1));
+		try {
+
+			if (f.createNewFile()) {
+				FileOutputStream fous = new FileOutputStream(f);
+				fous.write(lorem.getParagraphs(1, 50).getBytes());
+				fous.flush();
+				fous.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+}
+
+
+```
+
+----
+
+## Arquivo Leitura - File Reader
+
+```
+
+package br.com.unipac.file;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class LeituraArquivo {
+
+	public static final String BASE_PATH = "/tmp";
+
+	public static void main(String[] args) {
+
+		File dir = new File(BASE_PATH + File.separator + "diretorio");
+
+	      if (dir.isDirectory()) {
+
+	    	  for (File dirFile : dir.listFiles()) {
+	    		  leituraComFileReader(dirFile);
+	    	  }
+	      }
+	}
+
+
+	public static void leituraComFileReader(File f) {
+
+		try {
+			if (f != null && f.exists() && f.canRead()) {
+				System.out.println("(File Reader) - Realizando leitura do arquivo " + f.getAbsolutePath());
+				FileReader reader = new FileReader(f);
+				char buffer [] = new char [(int) f.length()];
+				reader.read(buffer);
+				System.out.println(buffer);
+				reader.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+
+}
+
+
+```
+
+----
+
+## Arquivo Leitura - Buffered Reader
+
+```
+
+package br.com.unipac.file;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class LeituraArquivo {
+
+	public static final String BASE_PATH = "/tmp";
+
+	public static void main(String[] args) {
+
+		File dir = new File(BASE_PATH + File.separator + "diretorio");
+
+	      if (dir.isDirectory()) {
+
+	    	  for (File dirFile : dir.listFiles()) {
+
+	    		  leituraComBufferedReader(dirFile);
+	    		  leituraComBufferedReaderJava8(dirFile);
+	    	  }
+	      }
+	}
+
+
+
+
+
+	public static void leituraComBufferedReader(File f) {
+
+		try {
+			if (f != null && f.exists() && f.canRead()) {
+				System.out.println("(Buffered Reader) - Realizando leitura do arquivo " + f.getAbsolutePath());
+				FileReader reader = new FileReader(f);
+				BufferedReader buffereader = new BufferedReader(reader);
+				String linha;
+
+				while ((linha = buffereader.readLine()) != null) {
+					System.out.println(linha);
+				}
+
+				buffereader.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	public static void leituraComBufferedReaderJava8(File f) {
+
+		try {
+			if (f != null && f.exists() && f.canRead()) {
+				System.out.println("(Buffered Reader Java 8) - Realizando leitura do arquivo " + f.getAbsolutePath());
+				FileReader reader = new FileReader(f);
+				BufferedReader buffereader = new BufferedReader(reader);
+
+				buffereader.lines().
+				map(String::toUpperCase).
+				forEach(System.out::println);
+				buffereader.close();
+
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+}
+
+
+```
+
+----
+
+## Arquivo Leitura - InputStream
+
+```
+
+package br.com.unipac.file;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class LeituraArquivo {
+
+	public static final String BASE_PATH = "/tmp";
+
+	public static void main(String[] args) {
+
+		File dir = new File(BASE_PATH + File.separator + "diretorio");
+
+	      if (dir.isDirectory()) {
+
+	    	  for (File dirFile : dir.listFiles()) {
+	    		  leituraComFileReader(dirFile);
+	    		  leituraComBufferedReader(dirFile);
+	    		  leituraComFileInputStream(dirFile);
+	    		  leituraComBufferedReaderJava8(dirFile);
+	    	  }
+	      }
+	}
+
+	public static void leituraComFileInputStream(File f) {
+
+		try {
+			if (f != null && f.exists() && f.canRead()) {
+				System.out.println("(File Input Stream) - Realizando leitura do arquivo " + f.getAbsolutePath());
+
+				FileInputStream finput = new FileInputStream(f);
+
+				byte[] buffer = new byte [(int) f.length()];
+				finput.read(buffer);
+				System.out.println(new String(buffer));
+				finput.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+
+```
+
+----
+
+
+## Java io vs nio
+
+![](img/nio-vs-io-1.png)
+
+
+Fonte: [DZone](https://dzone.com/articles/java-nio-vs-io)
+
+
+----
+
+
+## Java io vs nio
+
+![](img/nio-vs-io-1.png)
+
+
+Fonte: [DZone](https://dzone.com/articles/java-nio-vs-io)
+
+
+----
+
+## Funções Complementares - Copy
+
+```
+
+package br.com.unipac.file;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.CopyOption;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
+import com.thedeanda.lorem.Lorem;
+import com.thedeanda.lorem.LoremIpsum;
+
+public final class CopiaFile {
+
+	  public static final String BASE_PATH = "/tmp/diretorio";
+
+	  public static void main(String... aArgs) throws IOException {
+
+      // Criação do Arquivo
+		  Lorem lorem = LoremIpsum.getInstance();
+    	  File f = new File(BASE_PATH + File.separator + lorem.getWords(1));
+
+			try {
+				if (f.createNewFile()) {
+					FileWriter writer = new FileWriter(f);
+					writer.write(lorem.getParagraphs(1, 50));
+				    writer.flush();
+				    writer.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+      //Copia do Arquivo
+	    Path origem = Paths.get(f.getAbsolutePath());
+	    Path destino = Paths.get(f.getAbsolutePath()+"2");
+
+	    CopyOption[] options = new CopyOption[]{
+	      StandardCopyOption.REPLACE_EXISTING,
+	      StandardCopyOption.COPY_ATTRIBUTES
+	    };
+	    Files.copy(origem, destino, options);
+	  }
+	}
+
+```
+
+
+
+
+----  ----
+
 ## Atividades
 
 As atividades desenvolvidas no semestre poderão ser encontradas neste capítulo.
