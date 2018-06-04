@@ -1852,6 +1852,41 @@ int main (){
 
 ```
 
+
+
+
+
+----
+
+## Alocando Memória
+
+
+```
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+	{
+		int *inteiro;
+
+		inteiro = (int *)malloc(sizeof(int));
+
+		if (inteiro == 0)
+		{
+			printf("ERROR: Out of memory\n");
+			return 1;
+		}
+
+		*inteiro = 25;
+		printf("%d\n", *inteiro);
+
+		free(inteiro);
+
+		return 0;
+	}
+
+```
+
 ----
 
 
@@ -1884,8 +1919,44 @@ int main (){
 
 ```
 
+----
 
-----  
+## Alocando Memória e Struts
+
+
+```
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+struct Aluno {
+  int notaAluno;
+  char *nomeAluno;
+};
+
+int main (){
+
+  char aux[200];
+  struct Aluno *var_aluno;
+
+  var_aluno = (struct Aluno *)malloc(sizeof(struct Aluno));
+
+  scanf("%d", &var_aluno->notaAluno);
+  scanf("%s",aux);
+
+  var_aluno->nomeAluno = aux;
+
+  printf("%d - %s",var_aluno->notaAluno,var_aluno->nomeAluno);
+
+  return 0;
+}
+
+```
+
+
+----
+
 
 # Inicializando Ponteiros e String
 
@@ -1917,6 +1988,33 @@ int main (){
 ```
 
 ----
+
+
+## Buffer de String
+
+
+
+```
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+  char *s;
+
+  // Lendo com Malloc
+  s = (char *)malloc(sizeof(char) * (256));
+  scanf("%255[^\n]", s); // Ler até 255 caracteres
+  printf("%s", s);
+
+  //limpando memoria
+  free(s);
+
+  return 0;
+}
+```
+
+----
+
 
 ## Material Complementar
 
