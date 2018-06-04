@@ -2806,7 +2806,15 @@ public final class CopiaFile {
 
 ```
 
+----
 
+## Materiais Complementares - Copy
+
+* [FileChannel](https://docs.oracle.com/javase/7/docs/api/java/nio/channels/FileChannel.html)
+
+* [java.util.stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
+
+* [Exemplos Oracle](https://docs.oracle.com/javase/7/docs/technotes/guides/io/example/)
 
 
 ----  ----
