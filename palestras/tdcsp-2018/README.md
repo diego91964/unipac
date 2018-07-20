@@ -5,7 +5,7 @@
 
 ----
 
-<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imggraph.jpg"
+<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/graph.jpg"
  -->
 
  <!-- .slide:
@@ -24,7 +24,7 @@ data-state="dimbg"
 
 ----
 
-<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imggraph-big-data.png"
+<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/graph-big-data.png"
  -->
 
  <!-- .slide:
@@ -71,7 +71,7 @@ data-state="dimbg"
 
 # Dados Existentes
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgneo4j-dados-selecionados.png" width = "80%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/neo4j-dados-selecionados.png" width = "80%">
 
 
 ----
@@ -82,7 +82,7 @@ data-state="dimbg"
 
 #SQL ?
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgneo4j-dados-sql.png" width = "80%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/neo4j-dados-sql.png" width = "80%">
 
 ----
 
@@ -115,7 +115,7 @@ data-state="dimbg"
 
 
 
-<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imggraph-sample.png"
+<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/graph-sample.png"
  -->
 
  <!-- .slide:
@@ -125,7 +125,7 @@ data-state="dimbg"
 
 ----
 
-<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgcaixeiro-viajante.jpg"
+<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/caixeiro-viajante.jpg"
  -->
 
  <!-- .slide:
@@ -140,7 +140,7 @@ data-state="dimbg"
 # Teoria dos Grafos
 
 
-<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imggraph-teory.jpg"
+<!-- .slide: data-background="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/graph-teory.jpg"
  -->
 
  <!-- .slide:
@@ -155,7 +155,7 @@ data-state="dimbg"
 
 ----
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgneo4j-dados-propriedades.png" width = "80%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/neo4j-dados-propriedades.png" width = "80%">
 
 ----
 
@@ -164,12 +164,12 @@ data-state="dimbg"
 
 ----
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgneo4j-dados-relacionamento.png" width = "80%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/neo4j-dados-relacionamento.png" width = "80%">
 
 ----
 
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgneo4j-logo.png" width = "80%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/neo4j-logo.png" width = "80%">
 
 
 
@@ -184,7 +184,7 @@ data-state="dimbg"
 
 ----
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgneo4j-dados-estrutura.png" width = "50%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/neo4j-dados-estrutura.png" width = "50%">
 
 
 ----
@@ -196,11 +196,11 @@ data-state="dimbg"
 
 # CARREGAR CSV
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgcsv-sample.png" width = "60%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/csv-sample.png" width = "60%">
 
 ----
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgload-csv.sample.png" width = "60%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/load-csv.sample.png" width = "60%">
 
 
 ```
@@ -411,7 +411,7 @@ RETURN n1 , n2
 ----
 
 
-<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/imgqr-form-contato.png" width = "70%">
+<img src="https://github.com/diego91964/unipac/blob/master/palestras/tdcsp-2018/img/qr-form-contato.png" width = "70%">
 
 https://goo.gl/forms/wLjt0lXZA5QlNDkB3
 
