@@ -25,6 +25,22 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 
 
 
+----
+
+
+# Recursos utilizados
+
+[Black board](https://unipac-uberlandia.blackboard.com)
+
+[Code Combate](https://br.codecombat.com/students?_cc=PageSwimSad)
+
+[Github](https://github.com/)
+
+[Uri Online Judge](https://www.urionlinejudge.com.br)
+
+[Uri Academics](https://www.urionlinejudge.com.br/judge/en/disciplines/join/4375)
+
+
 ----  ----
 
 # Base Teórica
