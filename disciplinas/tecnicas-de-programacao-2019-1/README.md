@@ -2080,3 +2080,12 @@ int main() {
 [Prática 4](https://diego91964.github.io/unipac/disciplinas/tecnicas-de-programacao-2019-1/doc/praticas/[PRATICA][2019-1]-[TEC-1]-[04].pdf)
 
 [Prática 5](https://diego91964.github.io/unipac/disciplinas/tecnicas-de-programacao-2019-1/doc/praticas/[PRATICA][2019-1]-[TEC-1]-[05].pdf)
+
+
+----
+
+## Cursos Sugeridos
+
+[Git](https://learngitbranching.js.org/)
+
+[Lab Git](https://lab.github.com/courses)
