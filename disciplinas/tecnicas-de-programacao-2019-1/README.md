@@ -47,7 +47,7 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 
 ----
 
-## Teoria dos Conjutos
+## Teoria dos Conjuntos
 
 [Conjuntos - 1](https://www.youtube.com/watch?v=0aUEDxYjZg8)
 
@@ -88,7 +88,7 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 
 * AND: Será 1 somente se todos os operadores forem 1.
 * OR: Será 0 somente se todos os operadores forem 0.
-* NOT: Será 0 se o operador for 1, e 1 se o operador for 0
+* NOT: Será 0 se o operador for 1, e 1 se o operador for 0.
 
 ----
 
@@ -102,7 +102,7 @@ Como objetivos específicos temos a compreensão de linguagens de programação 
 # Conceitos
 
 Lógica de programação é a técnica de encadear pensamentos para atingir determinado
-objetigo. O aprendizado desta técnica é necessário para quem deseja criar softwares.
+objetivo. O aprendizado desta técnica é necessário para quem deseja criar softwares.
 
 ----
 
@@ -232,11 +232,11 @@ A escrita de um programa define como o software irá interagir com o usuário
 ## Escrita (printf)
 
 
-* (%d) Imprime o proximo argumento, o número deve ser um int
+* (%d) Imprime o próximo argumento, o número deve ser um int
 
-* (%f)  Imprime o proximo argumento, o número deve ser um float
+* (%f)  Imprime o próximo argumento, o número deve ser um float
 
-* (%c)  Imprime o proximo argumento, o número deve ser um char
+* (%c)  Imprime o próximo argumento, o número deve ser um char
 
 * (%s) Imprime uma cadeia de caracteres char[] ou char*
 
@@ -726,7 +726,7 @@ São exemplos de expressões:
 * (bol1 && boll2): verificação lógica
 * ((num1 > num2) && (num1 > num3)): Verificação matemática e lógica
 
-Em suma, o resultado de uma exressão que controla um if/else sempre terá como resultado
+Em suma, o resultado de uma expressão que controla um if/else sempre terá como resultado
 verdadeiro ou falso.
 
 
@@ -786,19 +786,19 @@ Para isto a linguagem C utiliza o controle de fluxo Switch:
 ```
   switch () {
     case condicao1 :
-      //bloco execuado
+      //bloco executado
       break;
     case condicao2 :
-      //bloco execuado
+      //bloco executado
       break;
     case condicao2 :
-      //bloco execuado
+      //bloco executado
       break;
     case condicao2 :
-      //bloco execuado
+      //bloco executado
       break;
     case condicao2 :
-      //bloco execuado
+      //bloco executado
       break;
     default:
       // condição padrão
@@ -873,7 +873,7 @@ Ex. O programa recebe um número de 0 a 9 e escreve ele por extenso.
 
 ## Inline Conditions
 
-Ainda existe outra forma de realizar comparações, utilizando os operadores térnários, ou inline conditions.
+Ainda existe outra forma de realizar comparações, utilizando os operadores ternários, ou inline conditions.
 
 Este operador consiste em uma comparação que poderá retornar dois valores, um caso a condição seja verdadeira e outro caso
 seja falsa.
@@ -1241,7 +1241,7 @@ Inicializar um vetor consiste em dar um valor inicial para determinadas posiçõ
 
 int main () {
 
-  //Iniciliza todos os elementos do vetor
+  //Inicializa todos os elementos do vetor
   int vetor_um[5] = { 0, 1, 2, 3, 4 };
 
   //Inicializa as três primeiras posições do vetor. As outras posições terão valor zero
@@ -1301,7 +1301,7 @@ vetor sempre irá retornar um elemento do mesmo tipo que ele.
 int main () {
   int i;
 
-  //Iniciliza todos os elementos do vetor
+  //Inicializa todos os elementos do vetor
   int vetor_um[5] = { 0, 1, 2, 3, 4 };
 
   // Acessando a posição de um vetor
@@ -1330,7 +1330,7 @@ int main () {
 
 ## Vetores Multidimensionais
 
-É possível declara um vetor de vetores utilizando a linguagem C. A declaração pode
+É possível declarar um vetor de vetores utilizando a linguagem C. A declaração pode
 ser feita da seguinte forma:
 
 ```
@@ -1358,7 +1358,7 @@ Podemos pensar neste tipo de array como uma matriz;
 int main () {
   int i , j;
 
-  //Iniciliza todos os elementos do vetor
+  //Inicializa todos os elementos do vetor
   int matriz[2][5] = { {1, 2, 3, 4, 5}, {6, 7, 8, 9, 10} };
 
   //Imprimindo utilizando loop for
@@ -1424,7 +1424,7 @@ entre chaves, ou seja ,um bloco.
 
 ## Chamando Funções
 
-Uma função pode ser chamada pelo nome, com a lista de parâmetro entre parên teses:
+Uma função pode ser chamada pelo nome, com a lista de parâmetro entre parênteses:
 
 ```
 int soma (int numero1, int numero2){
@@ -1674,7 +1674,7 @@ int main (){
 ## Funções Aninhadas
 
 Funções aninhadas, são funções declaradas dentro de outras funções. Isto pode ser útil
-para definir o scopo da função interna. As funções internas só podem ser chamadas nas funções
+para definir o escopo da função interna. As funções internas só podem ser chamadas nas funções
 em que foram criadas.
 
 
